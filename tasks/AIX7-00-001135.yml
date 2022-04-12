@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001135 | If SNMP service is enabled on AIX, the default SNMP password must not be used in the /etc/snmpd.conf config file."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001135
+  tags:
+    - AIX7-00-001135
+    - V-91583
+    - SV-101681
+    - CCI-000366
+    - severity_medium

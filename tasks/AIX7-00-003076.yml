@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003076 | The rusersd daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003076
+  tags:
+    - AIX7-00-003076
+    - V-91391
+    - SV-101489
+    - CCI-000381
+    - severity_medium

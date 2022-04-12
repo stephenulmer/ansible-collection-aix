@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003111 | AIX public directories must be the only world-writable directories and world-writable files must be located only in public directories."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003111
+  tags:
+    - AIX7-00-003111
+    - SV-101743
+    - V-91645
+    - CCI-000366
+    - severity_medium

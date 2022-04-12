@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003131 | AIX package management tool must be used daily to verify system software."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003131
+  tags:
+    - AIX7-00-003131
+    - SV-101809
+    - V-91711
+    - CCI-000366
+    - severity_medium

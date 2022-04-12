@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003063 | The ndpd-router must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003063
+  tags:
+    - AIX7-00-003063
+    - V-91365
+    - SV-101463
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002027 | AIX audit tools must be set to 4550 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002027
+  tags:
+    - AIX7-00-002027
+    - V-91471
+    - SV-101569
+    - CCI-001493
+    - CCI-001494
+    - CCI-001495
+    - severity_medium

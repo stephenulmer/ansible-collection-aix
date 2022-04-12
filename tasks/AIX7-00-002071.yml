@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002071 | AIX log files must be owned by a system group."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002071
+  tags:
+    - AIX7-00-002071
+    - SV-101553
+    - V-91455
+    - CCI-001314
+    - severity_medium

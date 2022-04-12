@@ -1,0 +1,11 @@
+---
+- name: "LOW | AIX7-00-003115 | AIX must contain no .forward files."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003115
+  tags:
+    - AIX7-00-003115
+    - SV-101753
+    - V-91655
+    - CCI-000366
+    - severity_low

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003137 | AIX must define default permissions for all authenticated users in such a way that the user can only read and modify their own files."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003137
+  tags:
+    - AIX7-00-003137
+    - V-91735
+    - SV-101833
+    - CCI-000366
+    - severity_medium

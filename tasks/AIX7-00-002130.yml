@@ -1,0 +1,11 @@
+---
+- name: "LOW | AIX7-00-002130 | If csh/tcsh shell is used, AIX must display logout messages."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002130
+  tags:
+    - AIX7-00-002130
+    - SV-101597
+    - V-91499
+    - CCI-002364
+    - severity_low

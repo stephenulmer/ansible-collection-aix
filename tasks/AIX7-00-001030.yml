@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001030 | AIX system must prevent the root account from directly logging in except from the system console."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001030
+  tags:
+    - AIX7-00-001030
+    - SV-101677
+    - V-91579
+    - CCI-000366
+    - severity_medium

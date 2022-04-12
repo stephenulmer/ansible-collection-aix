@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003047 | If sendmail is not required on AIX, the sendmail service must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003047
+  tags:
+    - AIX7-00-003047
+    - V-91331
+    - SV-101429
+    - CCI-000381
+    - severity_medium

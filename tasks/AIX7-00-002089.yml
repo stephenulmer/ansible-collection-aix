@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002089 | Samba packages must be removed from AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002089
+  tags:
+    - AIX7-00-002089
+    - SV-101669
+    - V-91571
+    - CCI-000366
+    - severity_medium

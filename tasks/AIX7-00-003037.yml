@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003037 | The AIX hosts.lpd file must not contain a + character."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003037
+  tags:
+    - AIX7-00-003037
+    - SV-101731
+    - V-91633
+    - CCI-000366
+    - severity_medium

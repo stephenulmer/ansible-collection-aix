@@ -1,0 +1,11 @@
+---
+- name: "LOW | AIX7-00-001024 | SSH must display the date and time of the last successful account login to AIX system upon login."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001024
+  tags:
+    - AIX7-00-001024
+    - V-91501
+    - SV-101599
+    - CCI-002314
+    - severity_low

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003062 | The ndpd-host daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003062
+  tags:
+    - AIX7-00-003062
+    - SV-101461
+    - V-91363
+    - CCI-000381
+    - severity_medium

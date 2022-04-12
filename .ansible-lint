@@ -1,0 +1,6 @@
+kinds:
+  - vars: "**/etc/*.yml"
+
+skip_list:
+  - meta-no-info
+  - no-handler

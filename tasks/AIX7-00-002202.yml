@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002202 | The AIX audit configuration files must be set to 640 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002202
+  tags:
+    - AIX7-00-002202
+    - SV-101373
+    - V-91275
+    - CCI-000171
+    - severity_medium

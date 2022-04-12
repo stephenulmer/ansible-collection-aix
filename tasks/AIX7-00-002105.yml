@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-002105 | AIX must config the SSH idle timeout interval."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002105
+  tags:
+    - AIX7-00-002105
+    - V-91491
+    - SV-101589
+    - CCI-001133
+    - CCI-002361
+    - severity_medium

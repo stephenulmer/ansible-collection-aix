@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003099 | AIX must allow admins to send a message to a user who logged in currently."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003099
+  tags:
+    - AIX7-00-003099
+    - V-91507
+    - SV-101605
+    - CCI-002165
+    - severity_medium

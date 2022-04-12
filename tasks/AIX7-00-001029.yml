@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001029 | AIX must provide xlock command in the CDE environment to let users retain their sessions lock until users are reauthenticated."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001029
+  tags:
+    - AIX7-00-001029
+    - SV-101331
+    - V-91231
+    - CCI-000056
+    - severity_medium

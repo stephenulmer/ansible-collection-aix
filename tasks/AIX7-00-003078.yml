@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003078 | The klogin daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003078
+  tags:
+    - AIX7-00-003078
+    - V-91397
+    - SV-101495
+    - CCI-000381
+    - severity_medium

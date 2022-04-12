@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003139 | The .rhosts file must not be supported in AIX PAM."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003139
+  tags:
+    - AIX7-00-003139
+    - V-91741
+    - SV-101839
+    - CCI-000366
+    - severity_medium

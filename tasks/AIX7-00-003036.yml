@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003036 | The AIX global initialization files must contain the mesg -n or mesg n commands."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003036
+  tags:
+    - AIX7-00-003036
+    - V-91631
+    - SV-101729
+    - CCI-000366
+    - severity_medium

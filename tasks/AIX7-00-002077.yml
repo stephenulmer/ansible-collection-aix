@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002077 | The inetd.conf file on AIX must be owned by root."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002077
+  tags:
+    - AIX7-00-002077
+    - V-91587
+    - SV-101685
+    - CCI-000366
+    - severity_medium

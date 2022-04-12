@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001105 | AIX must only allow the use of DoD PKI-established certificate authorities for verification of the establishment of protected sessions."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001105
+  tags:
+    - AIX7-00-001105
+    - SV-101655
+    - V-91557
+    - CCI-002470
+    - severity_medium

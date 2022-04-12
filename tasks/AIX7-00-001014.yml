@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001014 | The AIX system must automatically remove or disable emergency accounts after the crisis is resolved or 72 hours."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001014
+  tags:
+    - AIX7-00-001014
+    - SV-101535
+    - V-91437
+    - CCI-001682
+    - severity_medium

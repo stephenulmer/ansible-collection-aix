@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003019 | The AIX user home directories must not have extended ACLs."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003019
+  tags:
+    - AIX7-00-003019
+    - SV-101865
+    - V-91767
+    - CCI-000366
+    - severity_medium

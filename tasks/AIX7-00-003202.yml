@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003202 | The AIX operating system must be configured to use Multi Factor Authentication for remote connections."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003202
+  tags:
+    - AIX7-00-003202
+    - V-92945
+    - SV-103033
+    - CCI-000366
+    - severity_medium

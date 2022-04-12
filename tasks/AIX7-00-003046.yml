@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003046 | If NFS is not required on AIX, the NFS daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003046
+  tags:
+    - AIX7-00-003046
+    - V-91329
+    - SV-101427
+    - CCI-000381
+    - severity_medium

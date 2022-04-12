@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003000 | AIX must automatically lock after 15 minutes of inactivity in the CDE Graphical desktop environment."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003000
+  tags:
+    - AIX7-00-003000
+    - SV-101333
+    - V-91233
+    - CCI-000057
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003090 | If automated file system mounting tool is not required on AIX, it must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003090
+  tags:
+    - AIX7-00-003090
+    - V-91543
+    - SV-101641
+    - CCI-001958
+    - severity_medium

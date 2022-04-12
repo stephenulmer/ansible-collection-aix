@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002132 | The AIX syslog daemon must not accept remote messages unless it is a syslog server documented using site-defined procedures."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002132
+  tags:
+    - AIX7-00-002132
+    - V-91677
+    - SV-101775
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003052 | If AIX server is not functioning as a network router, the gated daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003052
+  tags:
+    - AIX7-00-003052
+    - SV-101441
+    - V-91343
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,27 @@
+galaxy_info:
+  role_name: aix7_stig
+  namespace: stephenulmer
+  author: Stephen Ulmer
+  description: Apply Security Technical Implementation Guide (STIG) Controls to AIX
+  company: Alleve Consulting, Inc.
+
+  license: MIT
+
+  min_ansible_version: 2.11
+
+  platforms:
+  - name: AIX
+    versions:
+      - 7.2
+      - 7.3
+
+  galaxy_tags:
+    - system
+    - security
+    - stig
+    - compliance
+    - hardening
+    - aix
+
+dependencies:
+  - ibm.power_aix

@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-003205 | The AIX operating system must accept and verify Personal Identity Verification (PIV) credentials."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003205
+  tags:
+    - AIX7-00-003205
+    - SV-103039
+    - V-92951
+    - CCI-001953
+    - CCI-001954
+    - severity_medium

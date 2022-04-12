@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003030 | AIX system must restrict the ability to switch to the root user to members of a defined group."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003030
+  tags:
+    - AIX7-00-003030
+    - SV-101679
+    - V-91581
+    - CCI-000366
+    - severity_medium

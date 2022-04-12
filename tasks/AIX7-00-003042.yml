@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003042 | The AIX qdaemon must be disabled if local or remote printing is not required."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003042
+  tags:
+    - AIX7-00-003042
+    - V-91321
+    - SV-101419
+    - CCI-000381
+    - severity_medium

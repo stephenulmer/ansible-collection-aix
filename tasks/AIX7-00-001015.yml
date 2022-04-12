@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001015 | The shipped /etc/security/mkuser.sys file on AIX must not be customized directly."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001015
+  tags:
+    - AIX7-00-001015
+    - SV-101311
+    - V-91211
+    - CCI-000015
+    - severity_medium

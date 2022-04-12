@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003126 | AIX control scripts library search paths must contain only absolute paths."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003126
+  tags:
+    - AIX7-00-003126
+    - SV-101789
+    - V-91691
+    - CCI-000366
+    - severity_medium

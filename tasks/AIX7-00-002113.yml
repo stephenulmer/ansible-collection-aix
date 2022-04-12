@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002113 | The AIX SSH daemon must not allow compression."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002113
+  tags:
+    - AIX7-00-002113
+    - SV-101803
+    - V-91705
+    - CCI-000366
+    - severity_medium

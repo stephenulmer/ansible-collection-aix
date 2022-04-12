@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003065 | The cmsd daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003065
+  tags:
+    - AIX7-00-003065
+    - SV-101467
+    - V-91369
+    - CCI-000381
+    - severity_medium

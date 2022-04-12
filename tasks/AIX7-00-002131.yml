@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-002131 | AIX must implement a remote syslog server that is documented using site-defined procedures."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002131
+  tags:
+    - AIX7-00-002131
+    - V-91657
+    - SV-101755
+    - CCI-000366
+    - CCI-001851
+    - severity_medium

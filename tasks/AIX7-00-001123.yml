@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001123 | AIX must require the change of at least 50% of the total number of characters when passwords are changed."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001123
+  tags:
+    - AIX7-00-001123
+    - V-91287
+    - SV-101385
+    - CCI-000195
+    - severity_high

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001034 | The AIX root account must not have world-writable directories in its executable search path."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001034
+  tags:
+    - AIX7-00-001034
+    - SV-101719
+    - V-91621
+    - CCI-000366
+    - severity_medium

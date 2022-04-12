@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001124 | AIX root passwords must never be passed over a network in clear text form."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001124
+  tags:
+    - AIX7-00-001124
+    - V-91293
+    - SV-101391
+    - CCI-000197
+    - severity_high

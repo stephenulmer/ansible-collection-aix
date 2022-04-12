@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001010 | The AIX SYSTEM attribute must not be set to NONE for any account."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001010
+  tags:
+    - AIX7-00-001010
+    - V-91425
+    - SV-101523
+    - CCI-000764
+    - severity_high

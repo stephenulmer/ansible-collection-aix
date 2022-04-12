@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001036 | UIDs reserved for system accounts must not be assigned to non-system accounts on AIX systems."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001036
+  tags:
+    - AIX7-00-001036
+    - SV-101763
+    - V-91665
+    - CCI-000366
+    - severity_medium

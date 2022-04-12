@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002082 | AIX time synchronization configuration file must be group-owned by bin, or system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002082
+  tags:
+    - AIX7-00-002082
+    - SV-101701
+    - V-91603
+    - CCI-000366
+    - severity_medium

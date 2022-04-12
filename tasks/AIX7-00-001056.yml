@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001056 | AIX nosuid option must be enabled on all NFS client mounts."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001056
+  tags:
+    - AIX7-00-001056
+    - SV-101691
+    - V-91593
+    - CCI-000366
+    - severity_medium

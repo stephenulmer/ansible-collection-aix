@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001016 | The regular users default primary group must be staff (or equivalent) on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001016
+  tags:
+    - AIX7-00-001016
+    - SV-101315
+    - V-91215
+    - CCI-000015
+    - severity_medium

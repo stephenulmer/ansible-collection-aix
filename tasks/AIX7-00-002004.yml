@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-002004 | AIX must produce audit records containing information to establish the source and the identity of any individual or process associated with an event."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002004
+  tags:
+    - AIX7-00-002004
+    - V-91251
+    - SV-101351
+    - CCI-000133
+    - CCI-001487
+    - severity_medium

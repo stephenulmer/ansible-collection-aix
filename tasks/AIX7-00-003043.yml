@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003043 | If AIX system does not act as a remote print server for other servers, the lpd daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003043
+  tags:
+    - AIX7-00-003043
+    - SV-101421
+    - V-91323
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002118 | AIX must turn off TCP forwarding for the SSH daemon."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002118
+  tags:
+    - AIX7-00-002118
+    - V-91733
+    - SV-101831
+    - CCI-000366
+    - severity_medium

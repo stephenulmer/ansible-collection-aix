@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001039 | The AIX root accounts home directory (other than /) must have mode 0700."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001039
+  tags:
+    - AIX7-00-001039
+    - V-91753
+    - SV-101851
+    - CCI-000366
+    - severity_medium

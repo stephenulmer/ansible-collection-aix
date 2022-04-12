@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003080 | The rquotad daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003080
+  tags:
+    - AIX7-00-003080
+    - V-91401
+    - SV-101499
+    - CCI-000381
+    - severity_medium

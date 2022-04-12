@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003094 | AIX kernel core dumps must be disabled unless needed."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003094
+  tags:
+    - AIX7-00-003094
+    - SV-101801
+    - V-91703
+    - CCI-000366
+    - severity_medium

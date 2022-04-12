@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003086 | The echo daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003086
+  tags:
+    - AIX7-00-003086
+    - SV-101511
+    - V-91413
+    - CCI-000381
+    - severity_medium

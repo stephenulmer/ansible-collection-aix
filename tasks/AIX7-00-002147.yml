@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002147 | The AIX /var/spool/cron/atjobs directory must be owned by daemon."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002147
+  tags:
+    - AIX7-00-002147
+    - CCI-000366
+    - severity_medium

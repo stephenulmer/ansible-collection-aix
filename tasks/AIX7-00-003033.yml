@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003033 | All AIX Group Identifiers (GIDs) referenced in the /etc/passwd file must be defined in the /etc/group file."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003033
+  tags:
+    - AIX7-00-003033
+    - SV-101723
+    - V-91625
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001041 | AIX must display the Standard Mandatory DoD Notice and Consent Banner before granting local or remote login access to the system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001041
+  tags:
+    - AIX7-00-001041
+    - SV-101321
+    - V-91221
+    - CCI-000048
+    - severity_medium

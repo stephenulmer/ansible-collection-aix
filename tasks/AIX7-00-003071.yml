@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003071 | The chargen daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003071
+  tags:
+    - AIX7-00-003071
+    - SV-101479
+    - V-91381
+    - CCI-000381
+    - severity_medium

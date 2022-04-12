@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002028 | AIX must verify the hash of audit tools."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002028
+  tags:
+    - AIX7-00-002028
+    - V-91489
+    - SV-101587
+    - CCI-001496
+    - severity_medium

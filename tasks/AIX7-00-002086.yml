@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002086 | All AIX interactive users home directories must be group-owned by the home directory owner primary group."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002086
+  tags:
+    - AIX7-00-002086
+    - SV-101861
+    - V-91763
+    - CCI-000366
+    - severity_medium

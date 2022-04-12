@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-003101 | The AIX system must have no .netrc files on the system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003101
+  tags:
+    - AIX7-00-003101
+    - V-91289
+    - SV-101387
+    - CCI-000196
+    - severity_high

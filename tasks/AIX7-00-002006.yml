@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002006 | AIX must produce audit records containing the full-text recording of privileged commands."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002006
+  tags:
+    - AIX7-00-002006
+    - V-91255
+    - SV-101355
+    - CCI-000135
+    - severity_medium

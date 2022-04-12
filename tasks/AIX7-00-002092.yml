@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002092 | The inetd.conf file on AIX must be group owned by the "system" group."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002092
+  tags:
+    - AIX7-00-002092
+    - CCI-000366
+    - severity_medium

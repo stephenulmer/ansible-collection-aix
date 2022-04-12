@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001100 | AIX must be configured to allow users to directly initiate a session lock for all connection types."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001100
+  tags:
+    - AIX7-00-001100
+    - V-91235
+    - SV-101335
+    - CCI-000058
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003075 | The rstatd daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003075
+  tags:
+    - AIX7-00-003075
+    - SV-101487
+    - V-91389
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003100 | The AIX SSH daemon must be configured to only use FIPS 140-2 approved ciphers."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003100
+  tags:
+    - AIX7-00-003100
+    - SV-101343
+    - V-91243
+    - CCI-000068
+    - severity_medium

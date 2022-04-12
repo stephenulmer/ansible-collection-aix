@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001139 | AIX removable media, remote file systems, and any file system not containing approved device files must be mounted with the nodev option."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001139
+  tags:
+    - AIX7-00-001139
+    - SV-101799
+    - V-91701
+    - CCI-000366
+    - severity_medium

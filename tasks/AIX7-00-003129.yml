@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003129 | The local initialization file library search paths must contain only absolute paths on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003129
+  tags:
+    - AIX7-00-003129
+    - V-91697
+    - SV-101795
+    - CCI-000366
+    - severity_medium

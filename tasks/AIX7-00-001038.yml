@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001038 | AIX must not have accounts configured with blank or null passwords."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001038
+  tags:
+    - AIX7-00-001038
+    - V-91737
+    - SV-101835
+    - CCI-000366
+    - severity_high

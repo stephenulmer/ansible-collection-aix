@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001007 | If AIX is using LDAP for authentication or account information, the /etc/ldap.conf file (or equivalent) must not contain passwords."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001007
+  tags:
+    - AIX7-00-001007
+    - V-91291
+    - SV-101389
+    - CCI-000196
+    - severity_high

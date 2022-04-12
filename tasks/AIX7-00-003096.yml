@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-003096 | AIX must set Stack Execution Disable (SED) system wide mode to all."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003096
+  tags:
+    - AIX7-00-003096
+    - SV-101541
+    - V-91443
+    - CCI-000366
+    - CCI-001095
+    - CCI-002824
+    - severity_medium

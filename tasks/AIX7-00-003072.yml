@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003072 | The discard daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003072
+  tags:
+    - AIX7-00-003072
+    - V-91383
+    - SV-101481
+    - CCI-000381
+    - severity_medium

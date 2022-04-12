@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003083 | The pop3 daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003083
+  tags:
+    - AIX7-00-003083
+    - V-91407
+    - SV-101505
+    - CCI-000381
+    - severity_medium

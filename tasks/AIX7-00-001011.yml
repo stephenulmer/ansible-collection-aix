@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001011 | Direct logins to the AIX system must not be permitted to shared accounts, default accounts, application accounts, and utility accounts."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001011
+  tags:
+    - AIX7-00-001011
+    - SV-101525
+    - V-91427
+    - CCI-000770
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003013 | AIX passwd.nntp file must have mode 0600 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003013
+  tags:
+    - AIX7-00-003013
+    - SV-101697
+    - V-91599
+    - CCI-000366
+    - severity_medium

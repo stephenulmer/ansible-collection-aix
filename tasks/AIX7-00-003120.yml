@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003120 | All global initialization file executable search paths must contain only absolute paths."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003120
+  tags:
+    - AIX7-00-003120
+    - V-91669
+    - SV-101767
+    - CCI-000366
+    - severity_medium

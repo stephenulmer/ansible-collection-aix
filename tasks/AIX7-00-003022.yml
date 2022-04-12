@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-003022 | AIX must disable trivial file transfer protocol."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003022
+  tags:
+    - AIX7-00-003022
+    - SV-101629
+    - V-91531
+    - CCI-001814
+    - severity_high

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001043 | The Department of Defense (DoD) login banner must be displayed during SSH, sftp, and scp login sessions on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001043
+  tags:
+    - AIX7-00-001043
+    - SV-101325
+    - V-91225
+    - CCI-000048
+    - severity_medium

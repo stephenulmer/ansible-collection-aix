@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002013 | Audit logs on the AIX system must be owned by root."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002013
+  tags:
+    - AIX7-00-002013
+    - SV-101363
+    - V-91263
+    - CCI-000162
+    - CCI-000163
+    - CCI-000164
+    - severity_medium

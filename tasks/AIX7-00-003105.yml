@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003105 | The rwalld daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003105
+  tags:
+    - AIX7-00-003105
+    - SV-101491
+    - V-91393
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "LOW | AIX7-00-002129 | If Bourne / ksh shell is used, AIX must display logout messages."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002129
+  tags:
+    - AIX7-00-002129
+    - SV-101595
+    - V-91497
+    - CCI-002364
+    - severity_low

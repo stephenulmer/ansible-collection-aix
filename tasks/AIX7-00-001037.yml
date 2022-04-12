@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001037 | The AIX root accounts list of preloaded libraries must be empty."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001037
+  tags:
+    - AIX7-00-001037
+    - SV-101785
+    - V-91687
+    - CCI-000366
+    - severity_medium

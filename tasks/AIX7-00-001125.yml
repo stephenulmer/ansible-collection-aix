@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001125 | AIX Operating systems must enforce 24 hours/1 day as the minimum password lifetime."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001125
+  tags:
+    - AIX7-00-001125
+    - V-91309
+    - SV-101407
+    - CCI-000198
+    - severity_medium

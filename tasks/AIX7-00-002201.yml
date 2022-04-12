@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002201 | The AIX audit configuration files must be group-owned by audit."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002201
+  tags:
+    - AIX7-00-002201
+    - SV-101371
+    - V-91273
+    - CCI-000171
+    - severity_medium

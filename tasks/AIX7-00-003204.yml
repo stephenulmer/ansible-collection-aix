@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003204 | The AIX operating system must be configured to use a valid server_ca.pem file."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003204
+  tags:
+    - AIX7-00-003204
+    - SV-103037
+    - V-92949
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002111 | AIX SSH daemon must be configured to only use Message Authentication Codes (MACs) employing FIPS 140-2 approved cryptographic hash algorithms."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002111
+  tags:
+    - AIX7-00-002111
+    - SV-101683
+    - V-91585
+    - CCI-000366
+    - severity_medium

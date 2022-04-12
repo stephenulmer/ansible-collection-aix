@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001018 | All system files, programs, and directories must be owned by a system account."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001018
+  tags:
+    - AIX7-00-001018
+    - V-91475
+    - SV-101573
+    - CCI-001499
+    - severity_medium

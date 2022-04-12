@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002144 | The AIX /etc/syslog.conf file must be owned by root."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002144
+  tags:
+    - AIX7-00-002144
+    - CCI-000366
+    - severity_medium

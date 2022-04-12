@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002025 | AIX audit tools must be owned by root."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002025
+  tags:
+    - AIX7-00-002025
+    - V-91467
+    - SV-101565
+    - CCI-001493
+    - CCI-001494
+    - CCI-001495
+    - severity_medium

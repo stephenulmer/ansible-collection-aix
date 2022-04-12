@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001035 | The Group Identifiers (GIDs) reserved for AIX system accounts must not be assigned to non-system accounts as their primary group GID."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001035
+  tags:
+    - AIX7-00-001035
+    - V-91623
+    - SV-101721
+    - CCI-000366
+    - severity_medium

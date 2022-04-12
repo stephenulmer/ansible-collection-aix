@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003122 | The SMTP service HELP command must not be enabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003122
+  tags:
+    - AIX7-00-003122
+    - SV-101773
+    - V-91675
+    - CCI-000366
+    - severity_medium

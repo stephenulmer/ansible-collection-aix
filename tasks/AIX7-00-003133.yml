@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003133 | AIX must not run any routing protocol daemons unless the system is a router."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003133
+  tags:
+    - AIX7-00-003133
+    - V-91717
+    - SV-101815
+    - CCI-000366
+    - severity_medium

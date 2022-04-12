@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001134 | The password hashes stored on AIX system must have been generated using a FIPS 140-2 approved cryptographic hashing algorithm."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001134
+  tags:
+    - AIX7-00-001134
+    - SV-101671
+    - V-91573
+    - CCI-000366
+    - severity_medium

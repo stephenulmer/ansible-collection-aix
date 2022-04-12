@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003140 | The AIX root user home directory must not be the root directory (/)."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003140
+  tags:
+    - AIX7-00-003140
+    - V-91751
+    - SV-101849
+    - CCI-000366
+    - severity_medium

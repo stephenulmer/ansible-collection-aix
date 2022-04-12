@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003056 | If rwhod is not required on AIX, the rwhod daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003056
+  tags:
+    - AIX7-00-003056
+    - SV-101449
+    - V-91351
+    - CCI-000381
+    - severity_medium

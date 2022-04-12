@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003093 | AIX process core dumps must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003093
+  tags:
+    - AIX7-00-003093
+    - SV-101771
+    - V-91673
+    - CCI-000366
+    - severity_medium

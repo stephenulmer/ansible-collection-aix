@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003066 | The ttdbserver daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003066
+  tags:
+    - AIX7-00-003066
+    - SV-101469
+    - V-91371
+    - CCI-000381
+    - severity_medium

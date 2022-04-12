@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003097 | AIX must protect against or limit the effects of Denial of Service (DoS) attacks by ensuring AIX is implementing rate-limiting measures on impacted network interfaces."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003097
+  tags:
+    - AIX7-00-003097
+    - SV-101657
+    - V-91559
+    - CCI-002385
+    - severity_medium

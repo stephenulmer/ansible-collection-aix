@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001055 | All AIX NFS anonymous UIDs and GIDs must be configured to values without permissions."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001055
+  tags:
+    - AIX7-00-001055
+    - V-91591
+    - SV-101689
+    - CCI-000366
+    - severity_medium

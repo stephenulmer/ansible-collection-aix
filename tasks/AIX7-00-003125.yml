@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003125 | All AIX files and directories must have a valid group owner."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003125
+  tags:
+    - AIX7-00-003125
+    - V-91689
+    - SV-101787
+    - CCI-000366
+    - severity_medium

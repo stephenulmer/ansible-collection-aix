@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003132 | The AIX DHCP client must not send dynamic DNS updates."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003132
+  tags:
+    - AIX7-00-003132
+    - SV-101813
+    - V-91715
+    - CCI-000366
+    - severity_medium

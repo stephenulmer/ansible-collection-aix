@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003006 | AIX log files must have mode 0640 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003006
+  tags:
+    - AIX7-00-003006
+    - V-91451
+    - SV-101549
+    - CCI-001314
+    - severity_medium

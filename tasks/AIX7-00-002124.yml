@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002124 | If AIX SSH daemon is required, the SSH daemon must only listen on the approved listening IP addresses."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002124
+  tags:
+    - AIX7-00-002124
+    - V-91773
+    - SV-101871
+    - CCI-000366
+    - severity_medium

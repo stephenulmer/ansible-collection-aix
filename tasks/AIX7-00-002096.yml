@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002096 | AIX must encrypt user data at rest using AIX Encrypted File System (EFS) if it is required."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002096
+  tags:
+    - AIX7-00-002096
+    - V-91723
+    - SV-101821
+    - CCI-000366
+    - CCI-002475
+    - CCI-002476
+    - severity_medium

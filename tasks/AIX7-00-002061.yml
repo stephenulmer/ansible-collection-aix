@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-002061 | AIX must remove NOPASSWD tag from sudo config files."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002061
+  tags:
+    - AIX7-00-002061
+    - SV-101635
+    - V-91537
+    - CCI-002038
+    - severity_high

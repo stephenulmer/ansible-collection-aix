@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003138 | There must be no .rhosts, .shosts, hosts.equiv, or shosts.equiv files on the AIX system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003138
+  tags:
+    - AIX7-00-003138
+    - SV-101837
+    - V-91739
+    - CCI-000366
+    - severity_medium

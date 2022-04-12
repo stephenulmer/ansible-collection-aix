@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001001 | AIX must automatically remove or disable temporary user accounts after 72 hours or sooner."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001001
+  tags:
+    - AIX7-00-001001
+    - SV-101317
+    - V-91217
+    - CCI-000016
+    - severity_medium

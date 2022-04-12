@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002026 | AIX audit tools must be group-owned by audit."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002026
+  tags:
+    - AIX7-00-002026
+    - V-91469
+    - SV-101567
+    - CCI-001493
+    - CCI-001494
+    - CCI-001495
+    - severity_medium

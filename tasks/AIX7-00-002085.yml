@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002085 | All AIX interactive users home directories must be owned by their respective users."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002085
+  tags:
+    - AIX7-00-002085
+    - SV-101859
+    - V-91761
+    - CCI-000366
+    - severity_medium

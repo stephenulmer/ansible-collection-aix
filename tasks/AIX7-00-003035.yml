@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003035 | The sticky bit must be set on all public directories on AIX systems."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003035
+  tags:
+    - AIX7-00-003035
+    - V-91629
+    - SV-101727
+    - CCI-000366
+    - severity_medium

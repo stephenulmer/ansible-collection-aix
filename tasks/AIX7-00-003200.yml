@@ -1,0 +1,15 @@
+---
+- name: "MEDIUM | AIX7-00-003200 | The AIX operating system must use Multi Factor Authentication."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003200
+  tags:
+    - AIX7-00-003200
+    - V-92941
+    - SV-103029
+    - CCI-000765
+    - CCI-000766
+    - CCI-000767
+    - CCI-000768
+    - CCI-001948
+    - severity_medium

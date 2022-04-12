@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-001108 | AIX must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001108
+  tags:
+    - AIX7-00-001108
+    - SV-101663
+    - V-91565
+    - CCI-000803
+    - CCI-002450
+    - severity_medium

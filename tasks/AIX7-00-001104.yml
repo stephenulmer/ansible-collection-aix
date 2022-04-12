@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001104 | If LDAP authentication is required on AIX, SSL must be used between LDAP clients and the LDAP servers to protect the integrity of remote access sessions."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001104
+  tags:
+    - AIX7-00-001104
+    - V-91461
+    - SV-101559
+    - CCI-001453
+    - severity_medium

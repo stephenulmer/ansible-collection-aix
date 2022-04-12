@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001000 | AIX /etc/security/mkuser.sys.custom file must not exist unless it is needed for customizing a new user account."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001000
+  tags:
+    - AIX7-00-001000
+    - SV-101313
+    - V-91213
+    - CCI-000015
+    - severity_medium

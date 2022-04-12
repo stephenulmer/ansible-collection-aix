@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003017 | AIX NFS server must be configured to restrict file system access to local hosts."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003017
+  tags:
+    - AIX7-00-003017
+    - SV-101741
+    - V-91643
+    - CCI-000366
+    - severity_medium

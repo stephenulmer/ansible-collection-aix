@@ -1,0 +1,14 @@
+---
+- name: "MEDIUM | AIX7-00-002011 | AIX must provide the function to filter audit records for events of interest based upon all audit fields within audit records, support on-demand reporting requirements, and an audit reduction function that supports on-demand audit review and analysis and after-the-fact investigations of security incidents."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002011
+  tags:
+    - AIX7-00-002011
+    - SV-101359
+    - V-91259
+    - CCI-000158
+    - CCI-001875
+    - CCI-001876
+    - CCI-001877
+    - severity_medium

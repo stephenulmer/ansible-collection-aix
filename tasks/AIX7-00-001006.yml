@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001006 | If the AIX system is using LDAP for authentication or account information, the LDAP SSL, or TLS connection must require the server provide a certificate and this certificate must have a valid path to a trusted CA."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001006
+  tags:
+    - AIX7-00-001006
+    - V-91277
+    - SV-101375
+    - CCI-000185
+    - severity_medium

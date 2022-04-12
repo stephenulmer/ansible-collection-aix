@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003028 | AIX must remove all software components after updated versions have been installed."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003028
+  tags:
+    - AIX7-00-003028
+    - SV-101661
+    - V-91563
+    - CCI-002617
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003029 | AIX must enforce a delay of at least 4 seconds between login prompts following a failed login attempt."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003029
+  tags:
+    - AIX7-00-003029
+    - SV-101667
+    - V-91569
+    - CCI-000366
+    - severity_medium

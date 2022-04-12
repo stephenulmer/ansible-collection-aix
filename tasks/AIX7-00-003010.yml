@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003010 | All library files must not have extended ACLs."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003010
+  tags:
+    - AIX7-00-003010
+    - SV-101579
+    - V-91481
+    - CCI-001499
+    - severity_medium

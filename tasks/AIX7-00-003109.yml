@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003109 | In the event of a system failure, AIX must preserve any information necessary to determine cause of failure and any information necessary to return to operations with least disruption to mission processes."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003109
+  tags:
+    - AIX7-00-003109
+    - V-91487
+    - SV-101585
+    - CCI-001665
+    - severity_medium

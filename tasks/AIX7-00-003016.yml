@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003016 | The AIX ldd command must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003016
+  tags:
+    - AIX7-00-003016
+    - V-91619
+    - SV-101717
+    - CCI-000366
+    - severity_medium

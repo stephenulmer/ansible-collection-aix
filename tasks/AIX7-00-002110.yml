@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002110 | AIX must setup SSH daemon to disable revoked public keys."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002110
+  tags:
+    - AIX7-00-002110
+    - V-91549
+    - SV-101647
+    - CCI-001991
+    - severity_medium

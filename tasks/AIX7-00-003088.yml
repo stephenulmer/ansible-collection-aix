@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003088 | If Stream Control Transmission Protocol (SCTP) must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003088
+  tags:
+    - AIX7-00-003088
+    - SV-101515
+    - V-91417
+    - CCI-000382
+    - severity_medium

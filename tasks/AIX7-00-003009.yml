@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003009 | All system command files must not have extended ACLs."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003009
+  tags:
+    - AIX7-00-003009
+    - V-91479
+    - SV-101577
+    - CCI-001499
+    - severity_medium

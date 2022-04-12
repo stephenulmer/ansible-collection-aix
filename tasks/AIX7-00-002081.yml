@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002081 | AIX time synchronization configuration file must be owned by root."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002081
+  tags:
+    - AIX7-00-002081
+    - V-91601
+    - SV-101699
+    - CCI-000366
+    - severity_medium

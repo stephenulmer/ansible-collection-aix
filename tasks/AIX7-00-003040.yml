@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-003040 | The AIX rsh daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003040
+  tags:
+    - AIX7-00-003040
+    - SV-101397
+    - V-91299
+    - CCI-000197
+    - severity_high

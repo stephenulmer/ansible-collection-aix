@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002079 | AIX audio devices must be group-owned by root, sys, bin, or system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002079
+  tags:
+    - AIX7-00-002079
+    - SV-101695
+    - V-91597
+    - CCI-000366
+    - severity_medium

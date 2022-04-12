@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003130 | The local initialization file lists of preloaded libraries must contain only absolute paths on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003130
+  tags:
+    - AIX7-00-003130
+    - SV-101797
+    - V-91699
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002023 | AIX must start audit at boot."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002023
+  tags:
+    - AIX7-00-002023
+    - V-91463
+    - SV-101561
+    - CCI-001464
+    - severity_medium

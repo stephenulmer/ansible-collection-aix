@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002116 | AIX SSH daemon must perform strict mode checking of home directory configuration files."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002116
+  tags:
+    - AIX7-00-002116
+    - SV-101827
+    - V-91729
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002103 | All AIX shells referenced in passwd file must be listed in /etc/shells file, except any shells specified for the purpose of preventing logins."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002103
+  tags:
+    - AIX7-00-002103
+    - SV-101739
+    - V-91641
+    - CCI-000366
+    - severity_medium

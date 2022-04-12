@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-003070 | The ntalk daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003070
+  tags:
+    - AIX7-00-003070
+    - V-91379
+    - SV-101477
+    - CCI-000381
+    - severity_high

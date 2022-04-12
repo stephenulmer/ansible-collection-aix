@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003203 | AIX must have the have the PowerSC Multi Factor Authentication Product configured."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003203
+  tags:
+    - AIX7-00-003203
+    - SV-103035
+    - V-92947
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002117 | AIX must turn off X11 forwarding for the SSH daemon."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002117
+  tags:
+    - AIX7-00-002117
+    - V-91731
+    - SV-101829
+    - CCI-000366
+    - severity_medium

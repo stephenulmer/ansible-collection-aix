@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001019 | AIX device files and directories must only be writable by users with a system account or as configured by the vendor."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001019
+  tags:
+    - AIX7-00-001019
+    - SV-101581
+    - V-91483
+    - CCI-001499
+    - severity_medium

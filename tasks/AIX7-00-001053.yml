@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-001053 | AIX must provide time synchronization applications that can synchronize the system clock to external time sources at least every 24 hours."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001053
+  tags:
+    - AIX7-00-001053
+    - V-91523
+    - SV-101621
+    - CCI-001891
+    - CCI-002046
+    - severity_medium

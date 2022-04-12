@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002114 | AIX must turn on SSH daemon privilege separation."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002114
+  tags:
+    - AIX7-00-002114
+    - SV-101823
+    - V-91725
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003104 | If DHCP server is not required on AIX, the DHCP server must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003104
+  tags:
+    - AIX7-00-003104
+    - SV-101437
+    - V-91339
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003015 | The AIX /etc/group file must not have an extended ACL."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003015
+  tags:
+    - AIX7-00-003015
+    - V-91617
+    - SV-101715
+    - CCI-000366
+    - severity_medium

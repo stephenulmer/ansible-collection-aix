@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003128 | The global initialization file lists of preloaded libraries must contain only absolute paths on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003128
+  tags:
+    - AIX7-00-003128
+    - SV-101793
+    - V-91695
+    - CCI-000366
+    - severity_medium

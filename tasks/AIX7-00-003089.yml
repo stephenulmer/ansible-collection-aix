@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003089 | The Reliable Datagram Sockets (RDS) protocol must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003089
+  tags:
+    - AIX7-00-003089
+    - SV-101517
+    - V-91419
+    - CCI-000382
+    - severity_medium

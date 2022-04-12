@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003044 | If AIX system does not support either local or remote printing, the piobe service must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003044
+  tags:
+    - AIX7-00-003044
+    - SV-101423
+    - V-91325
+    - CCI-000381
+    - severity_medium

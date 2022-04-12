@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-002059 | AIX telnet daemon must not be running."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002059
+  tags:
+    - AIX7-00-002059
+    - SV-101403
+    - V-91305
+    - CCI-000197
+    - severity_high

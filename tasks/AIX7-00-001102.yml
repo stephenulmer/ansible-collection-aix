@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001102 | AIX must employ strong authenticators in the establishment of nonlocal maintenance and diagnostic sessions."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001102
+  tags:
+    - AIX7-00-001102
+    - SV-101537
+    - V-91439
+    - CCI-000877
+    - severity_high

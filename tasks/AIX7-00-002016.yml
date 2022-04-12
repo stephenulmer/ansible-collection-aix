@@ -1,0 +1,23 @@
+---
+- name: "MEDIUM | AIX7-00-002016 | AIX must provide audit record generation functionality for DoD-defined auditable events."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002016
+  tags:
+    - AIX7-00-002016
+    - V-91775
+    - SV-101873
+    - CCI-000018
+    - CCI-000154
+    - CCI-000169
+    - CCI-000172
+    - CCI-001403
+    - CCI-001404
+    - CCI-001405
+    - CCI-001686
+    - CCI-001813
+    - CCI-002130
+    - CCI-002132
+    - CCI-002234
+    - CCI-002884
+    - severity_medium

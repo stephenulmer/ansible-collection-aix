@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-003049 | The AIX DHCP client must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003049
+  tags:
+    - AIX7-00-003049
+    - SV-101433
+    - V-91335
+    - CCI-000366
+    - CCI-000381
+    - severity_medium

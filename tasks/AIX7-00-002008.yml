@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002008 | AIX must be configured to generate an audit record when 75% of the audit file system is full."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002008
+  tags:
+    - AIX7-00-002008
+    - V-91257
+    - SV-101357
+    - CCI-000139
+    - severity_medium

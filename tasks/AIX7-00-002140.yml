@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002140 | The AIX /etc/hosts file must be owned by root."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002140
+  tags:
+    - AIX7-00-002140
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001129 | AIX must enforce a minimum 15-character password length."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001129
+  tags:
+    - AIX7-00-001129
+    - V-91317
+    - SV-101415
+    - CCI-000205
+    - severity_high

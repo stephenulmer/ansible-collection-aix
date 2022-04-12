@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002078 | AIX cron and crontab directories must be owned by root or bin."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002078
+  tags:
+    - AIX7-00-002078
+    - V-91595
+    - SV-101693
+    - CCI-000366
+    - severity_medium

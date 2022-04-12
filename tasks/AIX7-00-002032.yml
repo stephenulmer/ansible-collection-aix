@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002032 | AIX must provide the function for assigned ISSOs or designated SAs to change the auditing to be performed on all operating system components, based on all selectable event criteria in near real time."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002032
+  tags:
+    - AIX7-00-002032
+    - V-91515
+    - SV-101613
+    - CCI-001914
+    - severity_medium

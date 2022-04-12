@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003087 | The Internet Network News (INN) server must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003087
+  tags:
+    - AIX7-00-003087
+    - SV-101513
+    - V-91415
+    - CCI-000381
+    - severity_medium

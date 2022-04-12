@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003084 | The finger daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003084
+  tags:
+    - AIX7-00-003084
+    - SV-101507
+    - V-91409
+    - CCI-000381
+    - severity_medium

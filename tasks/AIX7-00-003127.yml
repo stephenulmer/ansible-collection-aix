@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003127 | The control script lists of preloaded libraries must contain only absolute paths on AIX systems."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003127
+  tags:
+    - AIX7-00-003127
+    - V-91693
+    - SV-101791
+    - CCI-000366
+    - severity_medium

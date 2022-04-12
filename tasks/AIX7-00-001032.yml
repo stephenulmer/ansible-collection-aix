@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001032 | AIX administrative accounts must not run a web browser, except as needed for local service administration."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001032
+  tags:
+    - AIX7-00-001032
+    - V-91607
+    - SV-101705
+    - CCI-000366
+    - severity_medium

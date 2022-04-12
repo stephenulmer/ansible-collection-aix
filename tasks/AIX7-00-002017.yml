@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002017 | AIX must be configured so that the audit system takes appropriate action when the audit storage volume is full."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002017
+  tags:
+    - AIX7-00-002017
+    - SV-109109
+    - V-100005
+    - CCI-001851
+    - severity_medium

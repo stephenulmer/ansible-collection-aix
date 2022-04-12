@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001101 | AIX CDE must conceal, via the session lock, information previously visible on the display with a publicly viewable image."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001101
+  tags:
+    - AIX7-00-001101
+    - SV-101337
+    - V-91237
+    - CCI-000060
+    - severity_medium

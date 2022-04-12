@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003039 | AIX run control scripts executable search paths must contain only absolute paths."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003039
+  tags:
+    - AIX7-00-003039
+    - V-91637
+    - SV-101735
+    - CCI-000366
+    - severity_medium

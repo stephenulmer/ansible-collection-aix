@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003045 | If there are no X11 clients that require CDE on AIX, the dt service must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003045
+  tags:
+    - AIX7-00-003045
+    - SV-101425
+    - V-91327
+    - CCI-000381
+    - severity_medium

@@ -1,0 +1,15 @@
+---
+- name: "MEDIUM | AIX7-00-001044 | Any publically accessible connection to AIX operating system must display the Standard Mandatory DoD Notice and Consent Banner before granting access to the system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001044
+  tags:
+    - AIX7-00-001044
+    - SV-101557
+    - V-91459
+    - CCI-001384
+    - CCI-001385
+    - CCI-001386
+    - CCI-001387
+    - CCI-001388
+    - severity_medium

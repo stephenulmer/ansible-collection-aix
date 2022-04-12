@@ -1,0 +1,16 @@
+---
+- name: "MEDIUM | AIX7-00-002097 | AIX must protect the confidentiality and integrity of transmitted information during preparation for transmission and maintain the confidentiality and integrity of information during reception and disable all non-encryption network access methods."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002097
+  tags:
+    - AIX7-00-002097
+    - V-91561
+    - SV-101659
+    - CCI-002418
+    - CCI-002420
+    - CCI-002421
+    - CCI-002422
+    - CCI-002890
+    - CCI-003123
+    - severity_medium

@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002142 | The AIX /etc/hosts file must have a mode of 0640 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002142
+  tags:
+    - AIX7-00-002142
+    - CCI-000366
+    - severity_medium

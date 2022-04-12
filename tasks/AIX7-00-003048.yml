@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003048 | If SNMP is not required on AIX, the snmpd service must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003048
+  tags:
+    - AIX7-00-003048
+    - SV-101431
+    - V-91333
+    - CCI-000381
+    - severity_medium

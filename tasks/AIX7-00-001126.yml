@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001126 | AIX Operating systems must enforce a 60-day maximum password lifetime restriction."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001126
+  tags:
+    - AIX7-00-001126
+    - SV-101409
+    - V-91311
+    - CCI-000199
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001046 | If LDAP authentication is required, AIX must setup LDAP client to refresh user and group caches less than a day."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001046
+  tags:
+    - AIX7-00-001046
+    - SV-101645
+    - V-91547
+    - CCI-002007
+    - severity_medium

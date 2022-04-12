@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001045 | IF LDAP is used, AIX LDAP client must use SSL to authenticate with LDAP server."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001045
+  tags:
+    - AIX7-00-001045
+    - V-91297
+    - SV-101395
+    - CCI-000197
+    - severity_high

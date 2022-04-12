@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001047 | The AIX /etc/passwd, /etc/security/passwd, and/or /etc/group files must not contain a plus (+) without defining entries for NIS+ netgroups or LDAP netgroups."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001047
+  tags:
+    - AIX7-00-001047
+    - V-91671
+    - SV-101769
+    - CCI-000366
+    - severity_medium

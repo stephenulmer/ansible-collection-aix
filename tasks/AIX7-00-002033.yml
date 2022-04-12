@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002033 | AIX must allocate audit record storage capacity to store at least one weeks worth of audit records, when audit records are not immediately sent to a central audit record storage facility."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002033
+  tags:
+    - AIX7-00-002033
+    - V-91517
+    - SV-101615
+    - CCI-001849
+    - severity_medium

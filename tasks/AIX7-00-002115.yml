@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002115 | AIX must turn on SSH daemon reverse name checking."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002115
+  tags:
+    - AIX7-00-002115
+    - V-91727
+    - SV-101825
+    - CCI-000366
+    - severity_medium

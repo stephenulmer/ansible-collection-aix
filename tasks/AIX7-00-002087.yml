@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002087 | All files and directories contained in users home directories on AIX must be group-owned by a group in which the home directory owner is a member."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002087
+  tags:
+    - AIX7-00-002087
+    - SV-101867
+    - V-91769
+    - CCI-000366
+    - severity_medium

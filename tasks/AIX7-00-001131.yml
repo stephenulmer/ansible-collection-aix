@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001131 | AIX must implement a way to force an identified temporary user to renew their password at next login."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001131
+  tags:
+    - AIX7-00-001131
+    - V-91545
+    - SV-101643
+    - CCI-002041
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003124 | The AIX systems access control program must be configured to grant or deny system access to specific hosts."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003124
+  tags:
+    - AIX7-00-003124
+    - V-91685
+    - SV-101783
+    - CCI-000366
+    - severity_medium

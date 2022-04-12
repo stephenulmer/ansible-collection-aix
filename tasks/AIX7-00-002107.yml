@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002107 | AIX must disable Kerberos Authentication in ssh config file to enforce access restrictions."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002107
+  tags:
+    - AIX7-00-002107
+    - SV-101627
+    - V-91529
+    - CCI-001814
+    - severity_medium

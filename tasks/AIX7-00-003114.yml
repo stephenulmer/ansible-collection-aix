@@ -1,0 +1,11 @@
+---
+- name: "LOW | AIX7-00-003114 | If the AIX host is running an SMTP service, the SMTP greeting must not provide version information."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003114
+  tags:
+    - AIX7-00-003114
+    - V-91653
+    - SV-101751
+    - CCI-000366
+    - severity_low

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001028 | AIX must provide the lock command to let users retain their session lock until users are reauthenticated."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001028
+  tags:
+    - AIX7-00-001028
+    - SV-101329
+    - V-91229
+    - CCI-000056
+    - severity_medium

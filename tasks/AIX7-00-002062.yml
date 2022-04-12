@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002062 | AIX must remove !authenticate option from sudo config files."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002062
+  tags:
+    - AIX7-00-002062
+    - SV-101637
+    - V-91539
+    - CCI-002038
+    - severity_medium

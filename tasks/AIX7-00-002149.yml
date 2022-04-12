@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002149 | The AIX /var/spool/cron/atjobs directory must have a mode of 0640 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002149
+  tags:
+    - AIX7-00-002149
+    - CCI-000366
+    - severity_medium

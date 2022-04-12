@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001033 | AIX default system accounts (with the exception of root) must not be listed in the cron.allow file or must be included in the cron.deny file, if cron.allow does not exist."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001033
+  tags:
+    - AIX7-00-001033
+    - SV-101707
+    - V-91609
+    - CCI-000366
+    - severity_medium

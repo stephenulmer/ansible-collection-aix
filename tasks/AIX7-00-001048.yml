@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001048 | AIX must protect the confidentiality and integrity of all information at rest."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001048
+  tags:
+    - AIX7-00-001048
+    - V-91449
+    - SV-101547
+    - CCI-001199
+    - severity_medium

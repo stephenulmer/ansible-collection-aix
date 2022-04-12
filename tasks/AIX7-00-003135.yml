@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003135 | AIX must not respond to ICMPv6 echo requests sent to a broadcast address."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003135
+  tags:
+    - AIX7-00-003135
+    - SV-101819
+    - V-91721
+    - CCI-000366
+    - severity_medium

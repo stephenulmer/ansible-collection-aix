@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003141 | All AIX interactive users must be assigned a home directory in the passwd file and the directory must exist."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003141
+  tags:
+    - AIX7-00-003141
+    - V-91755
+    - SV-101853
+    - CCI-000366
+    - severity_medium

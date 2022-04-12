@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002038 | AIX must record time stamps for audit records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT)."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002038
+  tags:
+    - AIX7-00-002038
+    - SV-101625
+    - V-91527
+    - CCI-001890
+    - severity_medium

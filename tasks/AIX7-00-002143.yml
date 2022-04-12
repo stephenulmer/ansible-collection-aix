@@ -1,0 +1,9 @@
+---
+- name: "MEDIUM | AIX7-00-002143 | AIX cron and crontab directories must have a mode of 0640 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002143
+  tags:
+    - AIX7-00-002143
+    - CCI-000366
+    - severity_medium

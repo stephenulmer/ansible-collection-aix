@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-003041 | The AIX rlogind service must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003041
+  tags:
+    - AIX7-00-003041
+    - V-91301
+    - SV-101399
+    - CCI-000197
+    - severity_high

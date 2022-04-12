@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002133 | AIX must be configured to use syslogd to log events by TCPD."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002133
+  tags:
+    - AIX7-00-002133
+    - SV-101631
+    - V-91533
+    - CCI-001814
+    - severity_medium

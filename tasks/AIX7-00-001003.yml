@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-001003 | AIX must enforce the limit of three consecutive invalid login attempts by a user before the user account is locked and released by an administrator."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001003
+  tags:
+    - AIX7-00-001003
+    - SV-101319
+    - V-91219
+    - CCI-000044
+    - CCI-002238
+    - severity_medium

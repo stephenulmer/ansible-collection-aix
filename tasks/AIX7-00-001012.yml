@@ -1,0 +1,12 @@
+---
+- name: "HIGH | AIX7-00-001012 | AIX must use the SSH server to implement replay-resistant authentication mechanisms for network access to privileged and non-privileged accounts."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001012
+  tags:
+    - AIX7-00-001012
+    - V-91429
+    - SV-101527
+    - CCI-001941
+    - CCI-001942
+    - severity_high

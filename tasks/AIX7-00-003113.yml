@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003113 | AIX must not use removable media as the boot loader."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003113
+  tags:
+    - AIX7-00-003113
+    - SV-101747
+    - V-91649
+    - CCI-000366
+    - severity_medium

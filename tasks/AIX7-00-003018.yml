@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003018 | All AIX users home directories must have mode 0750 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003018
+  tags:
+    - AIX7-00-003018
+    - SV-101857
+    - V-91759
+    - CCI-000366
+    - severity_medium

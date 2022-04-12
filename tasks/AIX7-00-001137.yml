@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001137 | AIX must be able to control the ability of remote login for users."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001137
+  tags:
+    - AIX7-00-001137
+    - SV-101601
+    - V-91503
+    - CCI-002314
+    - severity_high

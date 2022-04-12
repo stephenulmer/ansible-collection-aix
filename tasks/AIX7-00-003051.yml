@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003051 | If IPv6 is not utilized on AIX server, the autoconf6 daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003051
+  tags:
+    - AIX7-00-003051
+    - SV-101439
+    - V-91341
+    - CCI-000381
+    - severity_medium

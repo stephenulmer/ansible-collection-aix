@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-003143 | AIX must employ a deny-all, allow-by-exception firewall policy for allowing connections to other systems."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003143
+  tags:
+    - AIX7-00-003143
+    - V-91771
+    - SV-101869
+    - CCI-000366
+    - CCI-002080
+    - severity_medium

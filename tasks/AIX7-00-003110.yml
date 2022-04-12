@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003110 | The /etc/shells file must exist on AIX systems."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003110
+  tags:
+    - AIX7-00-003110
+    - SV-101737
+    - V-91639
+    - CCI-000366
+    - severity_medium

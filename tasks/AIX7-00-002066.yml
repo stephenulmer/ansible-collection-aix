@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002066 | AIX must not have IP forwarding for IPv6 enabled unless the system is an IPv6 router."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002066
+  tags:
+    - AIX7-00-002066
+    - SV-101807
+    - V-91709
+    - CCI-000366
+    - severity_medium

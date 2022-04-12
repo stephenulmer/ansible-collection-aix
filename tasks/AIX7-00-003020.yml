@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003020 | AIX must use Trusted Execution (TE) Check policy."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003020
+  tags:
+    - AIX7-00-003020
+    - V-91509
+    - SV-101607
+    - CCI-002165
+    - severity_medium

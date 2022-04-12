@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002070 | AIX log files must be owned by a system account."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002070
+  tags:
+    - AIX7-00-002070
+    - V-91453
+    - SV-101551
+    - CCI-001314
+    - severity_medium

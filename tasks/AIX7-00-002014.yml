@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002014 | Audit logs on the AIX system must be group-owned by system."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002014
+  tags:
+    - AIX7-00-002014
+    - SV-101365
+    - V-91265
+    - CCI-000162
+    - CCI-000163
+    - CCI-000164
+    - severity_medium

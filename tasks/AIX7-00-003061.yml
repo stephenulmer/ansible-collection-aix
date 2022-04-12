@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003061 | The aixmibd daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003061
+  tags:
+    - AIX7-00-003061
+    - V-91361
+    - SV-101459
+    - CCI-000381
+    - severity_medium

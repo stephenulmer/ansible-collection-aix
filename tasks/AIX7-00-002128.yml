@@ -1,0 +1,11 @@
+---
+- name: "LOW | AIX7-00-002128 | If bash is used, AIX must display logout messages."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002128
+  tags:
+    - AIX7-00-002128
+    - SV-101593
+    - V-91495
+    - CCI-002364
+    - severity_low

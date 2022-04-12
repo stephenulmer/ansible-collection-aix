@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001040 | The AIX root accounts home directory must not have an extended ACL."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001040
+  tags:
+    - AIX7-00-001040
+    - SV-101863
+    - V-91765
+    - CCI-000366
+    - severity_medium

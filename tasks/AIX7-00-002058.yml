@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-002058 | The AIX rexec daemon must not be running."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002058
+  tags:
+    - AIX7-00-002058
+    - V-91303
+    - SV-101401
+    - CCI-000197
+    - severity_high

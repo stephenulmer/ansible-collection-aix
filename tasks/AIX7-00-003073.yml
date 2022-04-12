@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003073 | The dtspc daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003073
+  tags:
+    - AIX7-00-003073
+    - V-91385
+    - SV-101483
+    - CCI-000381
+    - severity_medium

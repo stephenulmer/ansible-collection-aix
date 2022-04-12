@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002101 | AIX must monitor and record unsuccessful remote logins."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002101
+  tags:
+    - AIX7-00-002101
+    - V-91241
+    - SV-101341
+    - CCI-000067
+    - severity_medium

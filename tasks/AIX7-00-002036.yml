@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-002036 | AIX must provide a report generation function that supports on-demand audit review and analysis, on-demand reporting requirements, and after-the-fact investigations of security incidents."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002036
+  tags:
+    - AIX7-00-002036
+    - V-91521
+    - SV-101619
+    - CCI-001878
+    - CCI-001879
+    - CCI-001880
+    - severity_medium

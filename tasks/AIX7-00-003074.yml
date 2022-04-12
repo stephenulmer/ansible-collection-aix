@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003074 | The pcnfsd daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003074
+  tags:
+    - AIX7-00-003074
+    - SV-101485
+    - V-91387
+    - CCI-000381
+    - severity_medium

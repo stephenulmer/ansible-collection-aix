@@ -1,0 +1,13 @@
+---
+- name: "MEDIUM | AIX7-00-003003 | AIX must set inactivity time-out on login sessions and terminate all login sessions after 10 minutes of inactivity."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003003
+  tags:
+    - AIX7-00-003003
+    - V-91493
+    - SV-101591
+    - CCI-000879
+    - CCI-001133
+    - CCI-002361
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001031 | All AIX public directories must be owned by root or an application account."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001031
+  tags:
+    - AIX7-00-001031
+    - V-91589
+    - SV-101687
+    - CCI-000366
+    - severity_medium

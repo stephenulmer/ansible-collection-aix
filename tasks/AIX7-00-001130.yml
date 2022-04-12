@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001130 | AIX must enforce password complexity by requiring that at least one special character be used."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001130
+  tags:
+    - AIX7-00-001130
+    - V-91485
+    - SV-101583
+    - CCI-001619
+    - severity_medium

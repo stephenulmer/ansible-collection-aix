@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002088 | AIX library files must have mode 0755 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002088
+  tags:
+    - AIX7-00-002088
+    - SV-101575
+    - V-91477
+    - CCI-001499
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003038 | AIX sendmail logging must not be set to less than nine in the sendmail.cf file."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003038
+  tags:
+    - AIX7-00-003038
+    - V-91635
+    - SV-101733
+    - CCI-000366
+    - severity_medium

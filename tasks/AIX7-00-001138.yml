@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001138 | NFS file systems on AIX must be mounted with the nosuid option unless the NFS file systems contain approved setuid or setgid programs."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001138
+  tags:
+    - AIX7-00-001138
+    - V-91511
+    - SV-101609
+    - CCI-002233
+    - severity_medium

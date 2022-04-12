@@ -1,0 +1,12 @@
+---
+- name: "MEDIUM | AIX7-00-003025 | AIX must employ a deny-all, permit-by-exception policy to allow the execution of authorized software programs."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003025
+  tags:
+    - AIX7-00-003025
+    - V-91535
+    - SV-101633
+    - CCI-001764
+    - CCI-001774
+    - severity_medium

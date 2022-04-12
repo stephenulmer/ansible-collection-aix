@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002108 | If GSSAPI authentication is not required on AIX, the SSH daemon must disable GSSAPI authentication."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002108
+  tags:
+    - AIX7-00-002108
+    - SV-101639
+    - V-91541
+    - CCI-002038
+    - severity_medium

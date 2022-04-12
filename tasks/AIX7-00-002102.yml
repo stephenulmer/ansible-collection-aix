@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002102 | On AIX, the SSH server must not permit root logins using remote access programs."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002102
+  tags:
+    - AIX7-00-002102
+    - V-91577
+    - SV-101675
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003050 | If DHCP is not enabled in the network on AIX, the dhcprd daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003050
+  tags:
+    - AIX7-00-003050
+    - V-91337
+    - SV-101435
+    - CCI-000381
+    - severity_medium

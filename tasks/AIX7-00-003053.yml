@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003053 | If AIX server is not functioning as a multicast router, the mrouted daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003053
+  tags:
+    - AIX7-00-003053
+    - SV-101443
+    - V-91345
+    - CCI-000381
+    - severity_medium

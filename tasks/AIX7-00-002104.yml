@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002104 | The AIX SSH server must use SSH Protocol 2."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002104
+  tags:
+    - AIX7-00-002104
+    - SV-101345
+    - V-91245
+    - CCI-000068
+    - severity_medium

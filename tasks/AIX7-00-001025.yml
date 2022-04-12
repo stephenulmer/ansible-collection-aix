@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001025 | AIX must configure the ttys value for all interactive users."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001025
+  tags:
+    - AIX7-00-001025
+    - SV-102347
+    - V-92245
+    - CCI-000778
+    - severity_medium

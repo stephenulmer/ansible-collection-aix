@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003054 | If AIX server is not functioning as a DNS server, the named daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003054
+  tags:
+    - AIX7-00-003054
+    - V-91347
+    - SV-101445
+    - CCI-000381
+    - severity_medium

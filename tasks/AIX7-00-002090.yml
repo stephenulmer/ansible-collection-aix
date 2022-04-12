@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002090 | AIX time synchronization configuration file must have mode 0640 or less permissive."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002090
+  tags:
+    - AIX7-00-002090
+    - V-91605
+    - SV-101703
+    - CCI-000366
+    - severity_medium

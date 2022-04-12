@@ -1,0 +1,11 @@
+---
+- name: "HIGH | AIX7-00-001128 | AIX must use Loadable Password Algorithm  (LPA) password hashing algorithm."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001128
+  tags:
+    - AIX7-00-001128
+    - SV-101413
+    - V-91315
+    - CCI-000205
+    - severity_high

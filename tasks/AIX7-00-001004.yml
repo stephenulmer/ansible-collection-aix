@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001004 | AIX must limit the number of concurrent sessions to 10 for all accounts and/or account types."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001004
+  tags:
+    - AIX7-00-001004
+    - V-91227
+    - SV-101327
+    - CCI-000054
+    - severity_medium

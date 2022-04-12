@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001136 | AIX must require passwords to contain no more than three consecutive repeating characters."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001136
+  tags:
+    - AIX7-00-001136
+    - SV-101765
+    - V-91667
+    - CCI-000366
+    - severity_medium

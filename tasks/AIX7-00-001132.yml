@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-001132 | AIX must prevent the use of dictionary words for passwords."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_001132
+  tags:
+    - AIX7-00-001132
+    - V-91567
+    - SV-101665
+    - CCI-000366
+    - severity_medium

@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003077 | The sprayd daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003077
+  tags:
+    - AIX7-00-003077
+    - SV-101493
+    - V-91395
+    - CCI-000381
+    - severity_medium

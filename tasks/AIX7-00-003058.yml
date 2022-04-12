@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003058 | If AIX server does not host an SNMP agent, the dpid2 daemon must be disabled."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003058
+  tags:
+    - AIX7-00-003058
+    - SV-101453
+    - V-91355
+    - CCI-000381
+    - severity_medium

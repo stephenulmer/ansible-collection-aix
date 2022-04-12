@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003134 | AIX must not process ICMP timestamp requests."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003134
+  tags:
+    - AIX7-00-003134
+    - V-91719
+    - SV-101817
+    - CCI-000366
+    - severity_medium

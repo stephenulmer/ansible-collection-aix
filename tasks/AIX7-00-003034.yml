@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003034 | All AIX files and directories must have a valid owner."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003034
+  tags:
+    - AIX7-00-003034
+    - SV-101725
+    - V-91627
+    - CCI-000366
+    - severity_medium

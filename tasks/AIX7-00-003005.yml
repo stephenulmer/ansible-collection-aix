@@ -1,0 +1,13 @@
+---
+- name: "HIGH | AIX7-00-003005 | AIX must disable /usr/bin/rcp,
+/usr/bin/rlogin,
+/usr/bin/rsh, /usr/bin/rexec and /usr/bin/telnet commands."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003005
+  tags:
+    - AIX7-00-003005
+    - SV-101393
+    - V-91295
+    - CCI-000197
+    - severity_high

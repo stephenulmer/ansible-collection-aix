@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003112 | AIX must be configured to only boot from the system boot device."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003112
+  tags:
+    - AIX7-00-003112
+    - SV-101745
+    - V-91647
+    - CCI-000366
+    - severity_medium

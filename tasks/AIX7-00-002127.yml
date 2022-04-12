@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-002127 | AIX system must require authentication upon booting into single-user and maintenance modes."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_002127
+  tags:
+    - AIX7-00-002127
+    - V-91575
+    - SV-101673
+    - CCI-000366
+    - severity_medium

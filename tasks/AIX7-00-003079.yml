@@ -1,0 +1,11 @@
+---
+- name: "MEDIUM | AIX7-00-003079 | The kshell daemon must be disabled on AIX."
+  debug: msg="CONTROL NOT IMPLEMENTED"
+  when:
+    - aix7_00_003079
+  tags:
+    - AIX7-00-003079
+    - SV-101497
+    - V-91399
+    - CCI-000381
+    - severity_medium
