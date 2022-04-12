@@ -24,7 +24,7 @@ tags:
   - system
 
 dependencies:
-  ibm.power_aix: *
+  ibm.power_aix: "*"
 
 repository: https://github.com/stephenulmer/ansible-aix-collection
 issues: https://github.com/stephenulmer/ansible-aix-collection/issues
