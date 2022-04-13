@@ -3,3 +3,8 @@
   ansible.builtin.service:
     name: sshd
     state: restarted
+
+- name: refresh inetd
+  ansible.builtin.service:
+    name: inetd
+    state: reload
