@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002120 | The AIX SSH daemon must be configured to disable empty passwords."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?PermitEmptyPasswords (yes|no)'
+    line: "PermitEmptyPasswords no"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002120
   tags:

@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002144 | The AIX /etc/syslog.conf file must be owned by root."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/syslog.conf"
+    owner: root
   when:
     - aix7_00_002144
   tags:

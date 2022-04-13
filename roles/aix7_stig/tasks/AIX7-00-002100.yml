@@ -1,6 +1,18 @@
 ---
 - name: "MEDIUM | AIX7-00-002100 | AIX must monitor and record successful remote logins."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check state of /var/adm/wtmp
+      ansible.builtin.stat:
+        path: /var/adm/wtmp
+      register: aix7_stig_wtmp_stat
+
+    - name: Remove /var/adm/wtmp if symbolic link
+      ansible.builtin.file:
+        path: /var/adm/wtmp
+        state: absent
+      when:
+        - aix7_stig_wtmp_stat.stat.islink is defined
+        - aix7_stig_wtmp_stat.stat.islink
   when:
     - aix7_00_002100
   tags:

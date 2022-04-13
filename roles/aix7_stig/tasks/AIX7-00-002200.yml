@@ -1,6 +1,14 @@
 ---
 - name: "MEDIUM | AIX7-00-002200 | The AIX audit configuration files must be owned by root."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/security/audit/{{ item }}"
+    owner: root
+  loop:
+    - bincmds
+    - config
+    - events
+    - objects
+    - streamcmds
   when:
     - aix7_00_002200
   tags:

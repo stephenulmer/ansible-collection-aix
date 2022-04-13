@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002082 | AIX time synchronization configuration file must be group-owned by bin, or system."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/ntp.conf"
+    group: system
   when:
     - aix7_00_002082
   tags:

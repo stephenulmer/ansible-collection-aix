@@ -1,6 +1,27 @@
 ---
 - name: "MEDIUM | AIX7-00-001033 | AIX default system accounts (with the exception of root) must not be listed in the cron.allow file or must be included in the cron.deny file, if cron.allow does not exist."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check existence of cron.allow file
+      ansible.bultin.stat:
+        path: "/var/adm/cron/cron.allow"
+      register: aix7_stig_cron_allow_stat
+
+    - name: Remove system users from cron.allow file
+      ansible.builtin.lineinfile:
+        path: "/var/adm/cron/cron.allow"
+        regexp: "^({{ aix7_stig_system_accounts | join('|') }}) *$"
+        state: absent
+      when: aix7_stig_cron_allow_stat.stat.exists
+
+    - name: Add system users to cron.deny file
+      ansible.builtin.lineinfile:
+        path: "/var/adm/cron/cron.deny"
+        regexp: "^{{ item }}"
+        line: "{{ item }}"
+        state: present
+        create: yes
+      loop: "{{ aix7_stig_system_accounts }}"
+      when: not aix7_stig_cron_allow_stat.stat.exists
   when:
     - aix7_00_001033
   tags:

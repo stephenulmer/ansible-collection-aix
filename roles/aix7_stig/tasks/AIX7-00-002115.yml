@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002115 | AIX must turn on SSH daemon reverse name checking."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?VerifyReverseMapping (yes|no)'
+    line: "VerifyReverseMapping yes"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002115
   tags:

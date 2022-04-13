@@ -1,6 +1,22 @@
 ---
 - name: "MEDIUM | AIX7-00-001043 | The Department of Defense (DoD) login banner must be displayed during SSH, sftp, and scp login sessions on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Create /etc/motd.ssh
+      ansible.builtin.template:
+        path: "/etc/motd.ssh"
+        content: "{{ aix7_stig_login_banner_text }}"
+        mode: "0644"
+        owner: root
+        group: system
+
+    - name: Ensure /etc/ssh/sshd_config is configured to show /etc/motd.ssh
+      ansible.builtin.lineinfile:
+        path: "/etc/ssh/sshd_config"
+        regexp: '^(# *)?PrintLastLog'
+        line: "Banner /etc/motd.ssh"
+        state: present
+        validate: "/usr/sbin/sshd -t -f %s"
+        notify: restart sshd
   when:
     - aix7_00_001043
   tags:

@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002108 | If GSSAPI authentication is not required on AIX, the SSH daemon must disable GSSAPI authentication."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?GSSAPIAuthentication (yes|no)'
+    line: "GSSAPIAuthentication no"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002108
   tags:

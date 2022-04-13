@@ -1,8 +1,14 @@
 ---
-- name: "HIGH | AIX7-00-003005 | AIX must disable /usr/bin/rcp,
-/usr/bin/rlogin,
-/usr/bin/rsh, /usr/bin/rexec and /usr/bin/telnet commands."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+- name: "HIGH | AIX7-00-003005 | AIX must disable /usr/bin/rcp, /usr/bin/rlogin, /usr/bin/rsh, /usr/bin/rexec and /usr/bin/telnet commands."
+  ansible.builtin.file:
+    path: "{{ item }}"
+    mode: "0000"
+  loop:
+    - /usr/bin/rcp
+    - /usr/bin/rlogin
+    - /usr/bin/rsh
+    - /usr/bin/telnet
+    - /usr/bin/rexec
   when:
     - aix7_00_003005
   tags:

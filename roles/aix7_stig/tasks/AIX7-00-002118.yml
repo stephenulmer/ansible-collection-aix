@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002118 | AIX must turn off TCP forwarding for the SSH daemon."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?AllowTcpForwarding (yes|no)'
+    line: "AllowTcpForwarding no"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002118
   tags:

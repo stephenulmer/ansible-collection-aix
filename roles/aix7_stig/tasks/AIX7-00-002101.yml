@@ -1,6 +1,18 @@
 ---
 - name: "MEDIUM | AIX7-00-002101 | AIX must monitor and record unsuccessful remote logins."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check state of /etc/security/failedlogin
+      ansible.builtin.stat:
+        path: /etc/security/failedlogin
+      register: aix7_stig_failedlogin_stat
+
+    - name: Remove /etc/security/failedlogin if symbolic link
+      ansible.builtin.file:
+        path: /etc/security/failedlogin
+        state: absent
+      when:
+        - aix7_stig_failedlogin_stat.stat.islink is defined
+        - aix7_stig_failedlogin_stat.stat.islink
   when:
     - aix7_00_002101
   tags:

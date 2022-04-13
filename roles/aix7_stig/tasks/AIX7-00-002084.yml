@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002084 | The AIX /etc/group file must be group-owned by security."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/group"
+    group: security
   when:
     - aix7_00_002084
   tags:

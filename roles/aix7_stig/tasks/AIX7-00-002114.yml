@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002114 | AIX must turn on SSH daemon privilege separation."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?UsePrivilegeSeparation (yes|no)'
+    line: "UsePrivilegeSeparation yes"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002114
   tags:

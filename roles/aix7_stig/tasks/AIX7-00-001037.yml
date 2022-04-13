@@ -1,8 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-001037 | The AIX root accounts list of preloaded libraries must be empty."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  debug:
+    msg="FINDING | AIX7-00-001037 | $LDR_PRELOAD is defined for the root user. "
   when:
     - aix7_00_001037
+    - ansible_env.LDR_PRELOAD
   tags:
     - AIX7-00-001037
     - SV-101785

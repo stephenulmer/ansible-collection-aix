@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-003016 | The AIX ldd command must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/usr/bin/ldd"
+    mode: "0000"
   when:
     - aix7_00_003016
   tags:

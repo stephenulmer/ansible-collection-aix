@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002081 | AIX time synchronization configuration file must be owned by root."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/ntp.conf"
+    owner: root
   when:
     - aix7_00_002081
   tags:

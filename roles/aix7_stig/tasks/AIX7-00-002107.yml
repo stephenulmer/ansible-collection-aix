@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002107 | AIX must disable Kerberos Authentication in ssh config file to enforce access restrictions."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?KerberosAuthentication (yes|no)'
+    line: "KerberosAuthentication no"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002107
   tags:

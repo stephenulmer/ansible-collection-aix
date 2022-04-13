@@ -1,8 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-001039 | The AIX root accounts home directory (other than /) must have mode 0700."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: ansible_env.HOME
+    mode: '0700'
+    state: directory
   when:
     - aix7_00_001039
+    - ansible_env.HOME != '/'
   tags:
     - AIX7-00-001039
     - V-91753

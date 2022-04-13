@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002150 | AIX cron and crontab directories must be group owned by cron."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/var/spool/cron/crontabs"
+    group: cron
   when:
     - aix7_00_002150
   tags:

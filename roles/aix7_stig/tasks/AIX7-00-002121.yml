@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002121 | The AIX SSH daemon must be configured to disable user .rhosts files."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?IgnoreRhosts (yes|no)'
+    line: "IgnoreRhosts yes"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002121
   tags:

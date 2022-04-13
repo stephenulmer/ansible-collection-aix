@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-001000 | AIX /etc/security/mkuser.sys.custom file must not exist unless it is needed for customizing a new user account."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/security/mkuser.sys.custom"
+    state: absent
   when:
     - aix7_00_001000
   tags:

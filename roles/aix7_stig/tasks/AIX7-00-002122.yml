@@ -1,6 +1,12 @@
 ---
 - name: "MEDIUM | AIX7-00-002122 | The AIX SSH daemon must be configured to not use host-based authentication."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?HostbasedAuthentication (yes|no)'
+    line: "HostbasedAuthentication no"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_002122
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-002148 | The AIX /var/spool/cron/atjobs directory must be group-owned by daemon."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/var/spool/cron/atjobs"
+    group: daemon
+    state: directory
   when:
     - aix7_00_002148
   tags:

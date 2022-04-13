@@ -1,6 +1,12 @@
 ---
 - name: "LOW | AIX7-00-001024 | SSH must display the date and time of the last successful account login to AIX system upon login."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: '^(# *)?PrintLastLog (yes|no)'
+    line: "PrintLastLog yes"
+    state: present
+    validate: "/usr/sbin/sshd -t -f %s"
+  notify: restart sshd
   when:
     - aix7_00_001024
   tags:

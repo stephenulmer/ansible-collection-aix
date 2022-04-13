@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-002147 | The AIX /var/spool/cron/atjobs directory must be owned by daemon."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/var/spool/cron/atjobs"
+    owner: daemon
+    state: directory
   when:
     - aix7_00_002147
   tags:

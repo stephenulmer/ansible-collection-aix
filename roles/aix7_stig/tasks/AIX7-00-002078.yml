@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-002078 | AIX cron and crontab directories must be owned by root or bin."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/var/spool/cron/crontabs"
+    owner: bin # or root
+    state: directory
   when:
     - aix7_00_002078
   tags:

@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002146 | The AIX /etc/syslog.conf file must have a mode of 0640 or less permissive."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/syslog.conf"
+    mode: "0640"
   when:
     - aix7_00_002146
   tags:

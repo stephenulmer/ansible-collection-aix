@@ -1,6 +1,8 @@
 ---
 - name: "MEDIUM | AIX7-00-002142 | The AIX /etc/hosts file must have a mode of 0640 or less permissive."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/hosts"
+    mode: "0640"
   when:
     - aix7_00_002142
   tags:

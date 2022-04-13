@@ -1,6 +1,14 @@
 ---
 - name: "MEDIUM | AIX7-00-002202 | The AIX audit configuration files must be set to 640 or less permissive."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/etc/security/audit/{{ item }}"
+    mode: "0640"
+  loop:
+    - bincmds
+    - config
+    - events
+    - objects
+    - streamcmds
   when:
     - aix7_00_002202
   tags:

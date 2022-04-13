@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-002143 | AIX cron and crontab directories must have a mode of 0640 or less permissive."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: "/var/spool/cron/crontabs"
+    mode: "0640"
+    state: directory
   when:
     - aix7_00_002143
   tags:

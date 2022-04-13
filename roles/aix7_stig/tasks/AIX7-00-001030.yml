@@ -1,6 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-001030 | AIX system must prevent the root account from directly logging in except from the system console."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ibm.power_aix.user:
+    name: root
+    state: modify
+    attributes:
+      rlogin: "false"
   when:
     - aix7_00_001030
   tags:

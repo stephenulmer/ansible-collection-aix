@@ -1,6 +1,32 @@
 ---
 - name: "MEDIUM | AIX7-00-001032 | AIX administrative accounts must not run a web browser, except as needed for local service administration."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check existence of browser dotfiles
+      ansible.builtin.find:
+        file_type: any
+        patterns:
+          - ".netscape"
+          - ".mozilla"
+        paths:
+          - "{{ aix7_stig_root_home }}"
+      register: aix7_stig_root_browser_find
+
+    - name: Remove browser dotfiles
+      ansible.builtin.file:
+        path: "{{ item.path }}"
+        state: absent
+      loop: "{{ aix7_stig_root_browser_find.files }}"
+      when: aix7_stig_remediate_findings
+
+    - name: Report Finding
+      debug:
+        msg: |
+          FINDING | AIX7-00-001032
+
+          Administrative accounts should not run web browsers, but the
+          following files were found and removed:
+          {{ aix7_stig_root_browser_find.files | map(attribute='path') }}
+      when: aix7_stig_root_browser_find.files | length > 0
   when:
     - aix7_00_001032
   tags:
