@@ -1,4 +1,11 @@
 ---
+- name: Gather facts as the root user
+  setup:
+  become: yes
+
+- name: Gather facts about Licensed Program Products (LPPs)
+  ibm.power_aix.lpp_facts:
+
 - name: "Import Rule AIX7-00-001000"
   ansible.builtin.import_tasks: "AIX7-00-001000.yml"
   when: aix7_00_001000
