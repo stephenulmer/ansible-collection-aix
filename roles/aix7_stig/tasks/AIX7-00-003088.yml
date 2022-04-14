@@ -1,7 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003088 | If Stream Control Transmission Protocol (SCTP) must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.debug:
+    msg: "FINDING | AIX7-00-003088 | bos.net.sctp should not be installed"
   when:
+    - bos.net.sctp in ansible_facts.filesets
     - aix7_00_003088
   tags:
     - AIX7-00-003088

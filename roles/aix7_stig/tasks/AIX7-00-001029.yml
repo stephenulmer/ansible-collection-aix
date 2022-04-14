@@ -1,6 +1,20 @@
 ---
 - name: "MEDIUM | AIX7-00-001029 | AIX must provide xlock command in the CDE environment to let users retain their sessions lock until users are reauthenticated."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: The X11.apps.clients fileset is not installed
+      debug:
+        msg: "FINDING | AIX7-00-001029 | X11.apps.clients fileset is not installed"
+      when: X11.apps.clients not in ansible_facts.filesets
+
+    - name: The /usr/bin/X11/xlock command should exist
+      ansible.builtin.stat:
+        path: /usr/bin/X11/xlock
+      register: aix7_stig_xlock_stat
+
+    - name: The /usr/bin/X11/xlock command does not exist
+      ansible.builtin.debug:
+        msg: "FINDING | AIX7-00-001028 | The /usr/bin/X11/xlock command is missing"
+      when: not aix7_stig_xlock_stat.stat.exists
   when:
     - aix7_00_001029
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003063 | The ndpd-router must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/ndpd-router .*)$
+    replace: '#\1'
   when:
     - aix7_00_003063
   tags:

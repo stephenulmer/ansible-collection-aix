@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003090 | If automated file system mounting tool is not required on AIX, it must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ## automount is started from rc.nfs is /etc/auto_master exists and is not 0 bytes.
+  ansible.builtin.copy:
+    dest: /etc/auto_master
+    content: ""
   when:
     - aix7_00_003090
   tags:

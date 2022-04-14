@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-002077 | The inetd.conf file on AIX must be owned by root."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.file:
+    path: /etc/inetd.conf
+    owner: root
+  notify: refresh inetd
   when:
     - aix7_00_002077
   tags:

@@ -1,6 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-003083 | The pop3 daemon must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(pop3[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003083
   tags:

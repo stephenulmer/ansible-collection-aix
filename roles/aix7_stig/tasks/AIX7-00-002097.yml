@@ -1,6 +1,15 @@
 ---
 - name: "MEDIUM | AIX7-00-002097 | AIX must protect the confidentiality and integrity of transmitted information during preparation for transmission and maintain the confidentiality and integrity of information during reception and disable all non-encryption network access methods."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: The openssh.base.server fileset is not installed
+      debug:
+        msg: "FINDING | AIX7-00-002097 | openssh.base.server fileset is not installed"
+      when: openssh.base.server not in ansible_facts.filesets
+
+    - name: The ssh service should be running
+      ansible.builtin.service:
+        name: sshd
+        state: started
   when:
     - aix7_00_002097
   tags:

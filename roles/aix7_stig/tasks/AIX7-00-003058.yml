@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003058 | If AIX server does not host an SNMP agent, the dpid2 daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/dpid2 .*)$
+    replace: '#\1'
   when:
     - aix7_00_003058
   tags:

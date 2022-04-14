@@ -1,7 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-002089 | Samba packages must be removed from AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.debug:
+    msg: "FINDING | AIX7-00-002089 | Samba packages are installed"
   when:
+    - ansible_facts.filesets | select('search', 'samba') | length > 0
     - aix7_00_002089
   tags:
     - AIX7-00-002089

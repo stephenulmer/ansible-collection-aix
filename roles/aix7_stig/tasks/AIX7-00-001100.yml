@@ -1,6 +1,20 @@
 ---
 - name: "MEDIUM | AIX7-00-001100 | AIX must be configured to allow users to directly initiate a session lock for all connection types."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: The /usr/bin/lock command should exist
+      ansible.builtin.stat:
+        path: /usr/bin/lock
+      register: aix7_stig_lock_stat
+
+    - name: The /usr/bin/X11/xlock command should exist
+      ansible.builtin.stat:
+        path: /usr/bin/X11/xlock
+      register: aix7_stig_xlock_stat
+
+    - name: Print a screen locking command is missing
+      ansible.builtin.debug:
+        msg: "FINDING | AIX7-00-001100 | A screen locking command is missing
+      when: (not aix7_stig_lock_stat.stat.exists) or (not aix7_stig_xlock_stat.stat.exists)
   when:
     - aix7_00_001100
   tags:

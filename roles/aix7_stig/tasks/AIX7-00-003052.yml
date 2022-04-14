@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003052 | If AIX server is not functioning as a network router, the gated daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/gated .*)$
+    replace: '#\1'
   when:
     - aix7_00_003052
   tags:

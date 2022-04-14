@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003047 | If sendmail is not required on AIX, the sendmail service must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/lib/sendmail .*)$
+    replace: '#\1'
   when:
     - aix7_00_003047
   tags:

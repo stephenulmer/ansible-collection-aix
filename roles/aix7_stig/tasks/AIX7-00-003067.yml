@@ -1,6 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-003067 | The uucp (UNIX to UNIX Copy Program) daemon must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(uucp[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003067
   tags:

@@ -1,6 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-003082 | The imap2 service must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(imap2[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003082
   tags:

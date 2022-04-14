@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003056 | If rwhod is not required on AIX, the rwhod daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/rwhod .*)$
+    replace: '#\1'
   when:
     - aix7_00_003056
   tags:

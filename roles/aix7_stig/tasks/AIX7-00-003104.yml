@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003104 | If DHCP server is not required on AIX, the DHCP server must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/dhcpsd .*)$
+    replace: '#\1'
   when:
     - aix7_00_003104
   tags:

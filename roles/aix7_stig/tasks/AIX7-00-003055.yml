@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003055 | If AIX server is not functioning as a network router, the routed daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/routed .*)$
+    replace: '#\1'
   when:
     - aix7_00_003055
   tags:

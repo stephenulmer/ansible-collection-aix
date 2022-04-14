@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003053 | If AIX server is not functioning as a multicast router, the mrouted daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/mrouted .*)$
+    replace: '#\1'
   when:
     - aix7_00_003053
   tags:

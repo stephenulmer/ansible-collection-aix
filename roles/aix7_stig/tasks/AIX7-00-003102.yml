@@ -1,6 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-003102 | AIX must turn on enhanced Role-Based Access Control (RBAC) to isolate security functions from nonsecurity functions, to grant system privileges to other operating system admins, and prohibit user installation of system software without explicit privileged status."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ibm.power_aix.devices:
+    device: sys0
+    state: available
+    attributes:
+      enhanced_RBAC: 'true'
   when:
     - aix7_00_003102
   tags:

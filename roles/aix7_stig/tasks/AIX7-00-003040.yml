@@ -1,6 +1,10 @@
 ---
 - name: "HIGH | AIX7-00-003040 | The AIX rsh daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(shell[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003040
   tags:

@@ -1,6 +1,10 @@
 ---
 - name: "HIGH | AIX7-00-003022 | AIX must disable trivial file transfer protocol."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(tftp[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003022
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003054 | If AIX server is not functioning as a DNS server, the named daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/named .*)$
+    replace: '#\1'
   when:
     - aix7_00_003054
   tags:

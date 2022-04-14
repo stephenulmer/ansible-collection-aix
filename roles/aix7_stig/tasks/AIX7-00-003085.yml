@@ -1,6 +1,10 @@
 ---
 - name: "MEDIUM | AIX7-00-003085 | The instsrv daemon must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(instsrv[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003085
   tags:

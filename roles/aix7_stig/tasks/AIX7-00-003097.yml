@@ -1,6 +1,19 @@
 ---
 - name: "MEDIUM | AIX7-00-003097 | AIX must protect against or limit the effects of Denial of Service (DoS) attacks by ensuring AIX is implementing rate-limiting measures on impacted network interfaces."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Create /etc/tunables/nextboot Stanza for 'no'
+      ansible.builtin.lineinfile:
+        path: '/etc/tunables/nextboot'
+        line: 'no:'
+        state: present
+
+    - name: Setting /etc/tunables/nextboot options for clean_partial_conns
+      ansible.builtin.lineinfile:
+        path: '/etc/tunables/nextboot'
+        insertafter: '^no:'
+        regexp: '^ +clean_partial_conns'
+        line: '        clean_partial_conns = "1"'
+        state: present
   when:
     - aix7_00_003097
   tags:

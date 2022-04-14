@@ -1,6 +1,20 @@
 ---
 - name: "MEDIUM | AIX7-00-001028 | AIX must provide the lock command to let users retain their session lock until users are reauthenticated."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: The bos.rte.security fileset is not installed
+      debug:
+        msg: "FINDING | AIX7-00-001028 | bos.rte.security fileset is not installed"
+      when: bos.rte.security not in ansible_facts.filesets
+
+    - name: The /usr/bin/lock command should exist
+      ansible.builtin.stat:
+        path: /usr/bin/lock
+      register: aix7_stig_lock_stat
+
+    - name: The /usr/bin/lock command does not exist
+      ansible.builtin.debug:
+        msg: "FINDING | AIX7-00-001028 | The /usr/bin/lock command is missing"
+      when: not aix7_stig_lock_stat.stat.exists
   when:
     - aix7_00_001028
   tags:

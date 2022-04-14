@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003042 | The AIX qdaemon must be disabled if local or remote printing is not required."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/qdaemon .*)$
+    replace: '#\1'
   when:
     - aix7_00_003042
   tags:

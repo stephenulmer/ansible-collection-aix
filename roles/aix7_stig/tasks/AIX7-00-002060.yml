@@ -1,6 +1,10 @@
 ---
 - name: "HIGH | AIX7-00-002060 | AIX ftpd daemon must not be running."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(ftp[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_002060
   tags:

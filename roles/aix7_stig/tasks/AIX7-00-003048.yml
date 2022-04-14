@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003048 | If SNMP is not required on AIX, the snmpd service must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/snmpd .*)$
+    replace: '#\1'
   when:
     - aix7_00_003048
   tags:

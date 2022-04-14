@@ -1,6 +1,15 @@
 ---
 - name: "MEDIUM | AIX7-00-003098 | AIX must allow admins to send a message to all the users who logged in currently."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: The /usr/bin/wall command should exist
+      ansible.builtin.stat:
+        path: /usr/bin/wall
+      register: aix7_stig_wall_stat
+
+    - name: The /usr/bin/wall command does not exist
+      ansible.builtin.debug:
+        msg: "FINDING | AIX7-00-003098 | The /usr/bin/wall command is missing"
+      when: not aix7_stig_wall_stat.stat.exists
   when:
     - aix7_00_003098
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003051 | If IPv6 is not utilized on AIX server, the autoconf6 daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/autoconf6 .*)$
+    replace: '#\1'
   when:
     - aix7_00_003051
   tags:

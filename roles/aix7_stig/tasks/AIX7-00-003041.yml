@@ -1,6 +1,10 @@
 ---
 - name: "HIGH | AIX7-00-003041 | The AIX rlogind service must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/inetd.conf
+    regexp: ^(login[ \t]+.*)$
+    replace: '#\1'
+  notify: refresh inetd
   when:
     - aix7_00_003041
   tags:

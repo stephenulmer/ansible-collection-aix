@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003049 | The AIX DHCP client must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/dhcpcd .*)$
+    replace: '#\1'
   when:
     - aix7_00_003049
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003062 | The ndpd-host daemon must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/ndpd-host .*)$
+    replace: '#\1'
   when:
     - aix7_00_003062
   tags:

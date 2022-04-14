@@ -2,12 +2,10 @@
 - name: "MEDIUM | AIX7-00-001042 | The Department of Defense (DoD) login banner must be displayed immediately prior to, or as part of, graphical desktop environment login prompts on AIX."
   ansible.builtin.lineinfile:
     path: "/etc/dt/config/en_US/Xresources"
-    regexp: "Dtlogin\*greeting.labelString"
-    line: "Dtlogin*greeting.labelString: {{ greeting }}"
+    regexp: "Dtlogin\\*greeting.labelString"
+    line: "Dtlogin*greeting.labelString: {{ aix7_stig_login_banner }}"
     create: yes
     state: present
-  vars:
-    greeting: "{{ aix7_stig_login_banner }}"
   when:
     - aix7_00_001042
   tags:

@@ -1,6 +1,14 @@
 ---
 - name: "MEDIUM | AIX7-00-001048 | AIX must protect the confidentiality and integrity of all information at rest."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: clic.rte fileset message
+        ansible.builtin.debug:
+          msg: "FINDING | AIX7-00-001048 | The clic.rte fileset is not installed"
+        when: clic.rte not in ansible_facts.filesets
+
+    - name: Unimplemented check
+      fail:
+        msg: "UNIMPLEMENTED: Check list of non-default filesystems for JFS2 encryption"
   when:
     - aix7_00_001048
   tags:

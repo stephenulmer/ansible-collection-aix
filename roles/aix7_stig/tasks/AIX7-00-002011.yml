@@ -1,6 +1,15 @@
 ---
 - name: "MEDIUM | AIX7-00-002011 | AIX must provide the function to filter audit records for events of interest based upon all audit fields within audit records, support on-demand reporting requirements, and an audit reduction function that supports on-demand audit review and analysis and after-the-fact investigations of security incidents."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: The /usr/sbin/auditselect command should exist
+      ansible.builtin.stat:
+        path: /usr/sbin/auditselect
+      register: aix7_stig_auditselect_stat
+
+    - name: The /usr/sbin/auditselect command does not exist
+      ansible.builtin.debug:
+        msg: "FINDING | AIX7-00-002011 | The /usr/sbin/auditselect command is missing"
+      when: not aix7_stig_auditselect_stat.stat.exists
   when:
     - aix7_00_002011
   tags:

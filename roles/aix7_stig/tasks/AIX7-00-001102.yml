@@ -1,6 +1,9 @@
 ---
 - name: "HIGH | AIX7-00-001102 | AIX must employ strong authenticators in the establishment of nonlocal maintenance and diagnostic sessions."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/telnetd? .*)$
+    replace: '#\1'
   when:
     - aix7_00_001102
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003061 | The aixmibd daemon must be disabled on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/aixmibd .*)$
+    replace: '#\1'
   when:
     - aix7_00_003061
   tags:

@@ -1,6 +1,9 @@
 ---
 - name: "MEDIUM | AIX7-00-003043 | If AIX system does not act as a remote print server for other servers, the lpd daemon must be disabled."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  ansible.builtin.replace:
+    path: /etc/rc.tcpip
+    regexp: ^(start /usr/sbin/lpd .*)$
+    replace: '#\1'
   when:
     - aix7_00_003043
   tags:

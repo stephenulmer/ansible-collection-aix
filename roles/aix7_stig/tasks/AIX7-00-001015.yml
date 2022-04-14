@@ -1,6 +1,17 @@
 ---
 - name: "MEDIUM | AIX7-00-001015 | The shipped /etc/security/mkuser.sys file on AIX must not be customized directly."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check the contents of /etc/security/mkuser.sys
+      ansible.builtin.command:
+        cmd: "lppchk -c bos.rte.security /etc/security/mkuser.sys"
+      changed_when: no
+      failed_when: no
+      register: aix7_stig_mkuser_lppchk
+
+    - name: Print lppchk results
+      debug:
+        msg: "FINDING | AIX7-00-001015 | /etc/security/mkuser.sys has been customized."
+      when: aix7_stig_mkuser_lppchk.rc > 0
   when:
     - aix7_00_001015
   tags:
