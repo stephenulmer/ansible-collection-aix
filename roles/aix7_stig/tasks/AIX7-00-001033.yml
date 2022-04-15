@@ -2,7 +2,7 @@
 - name: "MEDIUM | AIX7-00-001033 | AIX default system accounts (with the exception of root) must not be listed in the cron.allow file or must be included in the cron.deny file, if cron.allow does not exist."
   block:
     - name: Check existence of cron.allow file
-      ansible.bultin.stat:
+      ansible.buitin.stat:
         path: "/var/adm/cron/cron.allow"
       register: aix7_stig_cron_allow_stat
 
