@@ -4,7 +4,7 @@
     - name: The bos.rte.security fileset is not installed
       debug:
         msg: "FINDING | AIX7-00-001028 | bos.rte.security fileset is not installed"
-      when: bos.rte.security not in ansible_facts.filesets
+      when: "'bos.rte.security' not in ansible_facts.filesets"
 
     - name: The /usr/bin/lock command should exist
       ansible.builtin.stat:

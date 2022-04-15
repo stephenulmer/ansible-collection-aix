@@ -4,7 +4,7 @@
     - name: The openssh.base.server fileset is not installed
       debug:
         msg: "FINDING | AIX7-00-002097 | openssh.base.server fileset is not installed"
-      when: openssh.base.server not in ansible_facts.filesets
+      when: "'openssh.base.server' not in ansible_facts.filesets"
 
     - name: The ssh service should be running
       ansible.builtin.service:

@@ -3,7 +3,7 @@
   ansible.builtin.debug:
     msg: "FINDING | AIX7-00-003088 | bos.net.sctp should not be installed"
   when:
-    - bos.net.sctp in ansible_facts.filesets
+    - "'bos.net.sctp' in ansible_facts.filesets"
     - aix7_00_003088
   tags:
     - AIX7-00-003088
