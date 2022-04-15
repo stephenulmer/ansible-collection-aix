@@ -2,6 +2,8 @@
 # Copyright (c) 2022 Stephen L. Ulmer
 #
 
+from __future__ import (absolute_import, division, print_function)
+
 class TestModule(object):
 
     def tests(self):
