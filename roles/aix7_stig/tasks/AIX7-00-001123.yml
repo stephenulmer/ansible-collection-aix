@@ -1,6 +1,11 @@
 ---
 - name: "HIGH | AIX7-00-001123 | AIX must require the change of at least 50% of the total number of characters when passwords are changed."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      mindiff: 8
+    state: present
   when:
     - aix7_00_001123
   tags:

@@ -1,6 +1,11 @@
 ---
 - name: "HIGH | AIX7-00-001122 | AIX must enforce password complexity by requiring that at least one numeric character be used."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      mindigit: 1
+    state: present
   when:
     - aix7_00_001122
   tags:

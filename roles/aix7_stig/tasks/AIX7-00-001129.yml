@@ -1,6 +1,11 @@
 ---
 - name: "HIGH | AIX7-00-001129 | AIX must enforce a minimum 15-character password length."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      minlen: 15
+    state: present
   when:
     - aix7_00_001129
   tags:

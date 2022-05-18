@@ -1,6 +1,11 @@
 ---
 - name: "HIGH | AIX7-00-001120 | AIX must enforce password complexity by requiring that at least one upper-case character be used."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      minupperalpha: 1
+    state: present
   when:
     - aix7_00_001120
   tags:

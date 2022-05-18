@@ -1,6 +1,11 @@
 ---
 - name: "HIGH | AIX7-00-001128 | AIX must use Loadable Password Algorithm  (LPA) password hashing algorithm."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/login.cfg
+    stanza: usw
+    attrs:
+      pwd_algorithm: ssha512
+    state: present
   when:
     - aix7_00_001128
   tags:
