@@ -3,6 +3,7 @@
   debug: msg="CONTROL NOT IMPLEMENTED"
   when:
     - aix7_00_001006
+    - aix7_stig_uses_ldap
   tags:
     - AIX7-00-001006
     - V-91277

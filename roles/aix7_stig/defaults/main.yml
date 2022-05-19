@@ -1,4 +1,7 @@
 ---
+## Set falsy if installation does not use LDAP to avoid LDAP-related controls
+aix7_stig_uses_ldap: yes
+
 aix7_stig_app_users:
   - root
 
