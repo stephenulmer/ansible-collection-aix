@@ -3,6 +3,7 @@
   ibm.power_aix.devices:
     device: sys0
     state: available
+    chtype: reboot
     attributes:
       enhanced_RBAC: 'true'
   when:
@@ -16,3 +17,5 @@
     - CCI-001812
     - CCI-002165
     - severity_medium
+
+## FIXME: Need to trigger a message to reboot
