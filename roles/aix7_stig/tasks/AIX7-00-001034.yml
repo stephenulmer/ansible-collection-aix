@@ -2,20 +2,19 @@
 - name: "MEDIUM | AIX7-00-001034 | The AIX root account must not have world-writable directories in its executable search path."
   block:
     - name: Examine directories in the root user's $PATH
-      ansible.builtin.find:
-        recurse: no
-        file_type: directory
-        pattern: "{{ ansible_env.PATH | split(':') }}"
+      ansible.builtin.stat:
+        path: "{{ item }}"
+      loop: "{{ ansible_env.PATH | split(':') }}"
       register: aix7_stig_root_path_dirs
 
     - name: Print world-writable directories in root's $PATH
       debug:
         msg: "FINDING | AIX7-00-00103 | {{ item }} is world writable."
       loop: >-
-        {{ aix7_stig_root_path_dirs
-           | selectattr('isdir')
-           | selectattr('mode', 'mode_permits', '0002')
-           | map(attribute='path') }}
+        {{ aix7_stig_root_path_dirs.results
+           | selectattr('stat.isdir')
+           | selectattr('stat.mode', 'mode_permits', '0002')
+           | map(attribute='stat.path') }}
   when:
     - aix7_00_001034
   tags:
