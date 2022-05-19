@@ -1,6 +1,17 @@
 ---
 - name: "HIGH | AIX7-00-001008 | All accounts on AIX system must have unique account names."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Run AIX usrck Command
+      ansible.builtin.command:
+        cmd: "usrck -n ALL"
+      changed_when: no
+      failed_when: no
+      register: aix7_stig_usrck_names
+
+    - name: Print usrck results
+      debug:
+        msg: "FINDING | AIX7-00-001008 | There are AIX accounts with duplicate names.
+      when: aix7_stig_usrck_names.stdout is search('user name \w+ is not unique')
   when:
     - aix7_00_001008
   tags:

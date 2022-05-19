@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001130 | AIX must enforce password complexity by requiring that at least one special character be used."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      minspecialchar: 1
+    state: present
   when:
     - aix7_00_001130
   tags:

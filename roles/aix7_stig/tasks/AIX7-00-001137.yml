@@ -1,6 +1,10 @@
 ---
 - name: "HIGH | AIX7-00-001137 | AIX must be able to control the ability of remote login for users."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      rlogin: 'false'
   when:
     - aix7_00_001137
   tags:

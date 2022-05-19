@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001134 | The password hashes stored on AIX system must have been generated using a FIPS 140-2 approved cryptographic hashing algorithm."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/login.cfg
+    stanza: usw
+    attrs:
+      pwd_algorithm: ssha512
+    state: present
   when:
     - aix7_00_001134
   tags:

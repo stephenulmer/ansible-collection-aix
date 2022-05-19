@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001136 | AIX must require passwords to contain no more than three consecutive repeating characters."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      maxrepeats: 3
+    state: present
   when:
     - aix7_00_001136
   tags:

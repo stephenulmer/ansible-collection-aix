@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001025 | AIX must configure the ttys value for all interactive users."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      ttys: ALL
+    state: present
   when:
     - aix7_00_001025
   tags:

@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001132 | AIX must prevent the use of dictionary words for passwords."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/user
+    stanza: default
+    attrs:
+      dictionlist: "/etc/security/ice/dictionary/English"
+    state: present
   when:
     - aix7_00_001132
   tags:

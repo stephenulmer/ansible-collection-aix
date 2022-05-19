@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001016 | The regular users default primary group must be staff (or equivalent) on AIX."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/mkuser.default
+    stanza: user
+    attrs:
+      pgrp: staff
+    state: present
   when:
     - aix7_00_001016
   tags:

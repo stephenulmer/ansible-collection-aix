@@ -1,6 +1,17 @@
 ---
 - name: "HIGH | AIX7-00-001007 | If AIX is using LDAP for authentication or account information, the /etc/ldap.conf file (or equivalent) must not contain passwords."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Remove plain text bindpwd entry from LDAP configuration file
+      ansible.builtin.lineinfile:
+        path: /etc/security/ldap/ldap.cfg
+        regexp: '^bindpwd:\w*[^{]'
+        state: absent
+
+    - name: Remove ldapsslkeypwd entry from LDAP configuration file
+      ansible.builtin.lineinfile:
+        path: /etc/security/ldap/ldap.cfg
+        regexp: '^ldapsslkeypwd'
+        state: absent
   when:
     - aix7_00_001007
     - aix7_stig_uses_ldap

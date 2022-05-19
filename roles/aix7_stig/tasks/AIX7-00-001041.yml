@@ -1,6 +1,11 @@
 ---
 - name: "MEDIUM | AIX7-00-001041 | AIX must display the Standard Mandatory DoD Notice and Consent Banner before granting local or remote login access to the system."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  stephenulmer.aix.chsec:
+    file: /etc/security/login.cfg
+    stanza: default
+    attrs:
+      herald: "{{ aix7_stig_login_banner }}"
+    state: present
   when:
     - aix7_00_001041
   tags:

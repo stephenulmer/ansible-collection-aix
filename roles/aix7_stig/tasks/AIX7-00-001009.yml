@@ -1,6 +1,17 @@
 ---
 - name: "HIGH | AIX7-00-001009 | All accounts on AIX must be assigned unique User Identification Numbers (UIDs) and must authenticate organizational and non-organizational users (or processes acting on behalf of these users)."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Run AIX usrck Command
+      ansible.builtin.command:
+        cmd: "usrck -n ALL"
+      changed_when: no
+      failed_when: no
+      register: aix7_stig_usrck_uids
+
+    - name: Print usrck results
+      debug:
+        msg: "FINDING | AIX7-00-001009 | There are AIX accounts with duplicate UIDs.
+      when: aix7_stig_usrck_uids.stdout is search('UID \d+ is duplicated')
   when:
     - aix7_00_001009
   tags:
