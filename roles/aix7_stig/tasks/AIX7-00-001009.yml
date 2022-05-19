@@ -10,7 +10,7 @@
 
     - name: Print usrck results
       debug:
-        msg: "FINDING | AIX7-00-001009 | There are AIX accounts with duplicate UIDs.
+        msg: "FINDING | AIX7-00-001009 | There are AIX accounts with duplicate UIDs."
       when: aix7_stig_usrck_uids.stdout is search('UID \d+ is duplicated')
   when:
     - aix7_00_001009

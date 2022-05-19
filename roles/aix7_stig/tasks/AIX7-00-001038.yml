@@ -1,5 +1,6 @@
 ---
 - name: "HIGH | AIX7-00-001038 | AIX must not have accounts configured with blank or null passwords."
+  block:
     - name: Run the AIX pwdck command
       ansible.builtin.command:
         cmd: "pwdck -n ALL"
@@ -9,7 +10,7 @@
 
     - name: Print lppchk results
       debug:
-        msg: "FINDING | AIX7-00-001038 | AIX account has blank password
+        msg: "FINDING | AIX7-00-001038 | AIX account has blank password"
       when: aix7_stig_pwdck_password is search('user \w+ has an invalid password attribute')
   when:
     - aix7_00_001038

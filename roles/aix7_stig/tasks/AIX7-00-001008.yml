@@ -10,7 +10,7 @@
 
     - name: Print usrck results
       debug:
-        msg: "FINDING | AIX7-00-001008 | There are AIX accounts with duplicate names.
+        msg: "FINDING | AIX7-00-001008 | There are AIX accounts with duplicate names."
       when: aix7_stig_usrck_names.stdout is search('user name \w+ is not unique')
   when:
     - aix7_00_001008
