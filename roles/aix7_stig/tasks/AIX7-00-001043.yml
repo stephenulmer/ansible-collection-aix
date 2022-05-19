@@ -3,7 +3,7 @@
   block:
     - name: Create /etc/motd.ssh
       ansible.builtin.template:
-        path: "/etc/motd.ssh"
+        dest: "/etc/motd.ssh"
         content: "{{ aix7_stig_login_banner_text }}"
         mode: "0644"
         owner: root
