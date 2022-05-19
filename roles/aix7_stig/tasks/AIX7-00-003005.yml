@@ -1,14 +1,29 @@
 ---
 - name: "HIGH | AIX7-00-003005 | AIX must disable /usr/bin/rcp, /usr/bin/rlogin, /usr/bin/rsh, /usr/bin/rexec and /usr/bin/telnet commands."
-  ansible.builtin.file:
-    path: "{{ item }}"
-    mode: "0000"
-  loop:
-    - /usr/bin/rcp
-    - /usr/bin/rlogin
-    - /usr/bin/rsh
-    - /usr/bin/telnet
-    - /usr/bin/rexec
+  block:
+    - name: Check existence of r-command files
+      ansible.builtin.stat:
+        path: "{{ command_to_check }}"
+      loop: "{{ files_to_check }}"
+      loop_control:
+        loop_var: command_to_check
+      register: stig_aix7_rcommands_stat
+
+    - name: Change permissions for r-commands that exist
+      ansible.builtin.file:
+        path: "{{ item }}"
+        mode: "0000"
+      loop: >-
+        {{ stig_aix7_rcommands_stat
+           | selectattr('stat.exists')
+           | map(attribute='stat.path') }}
+  vars:
+    files_to_check:
+      - /usr/bin/rcp
+      - /usr/bin/rlogin
+      - /usr/bin/rsh
+      - /usr/bin/rexec
+      - /usr/bin/telnet
   when:
     - aix7_00_003005
   tags:
