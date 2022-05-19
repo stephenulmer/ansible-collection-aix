@@ -3,6 +3,7 @@
   debug: msg="CONTROL NOT IMPLEMENTED"
   when:
     - aix7_00_001001
+    - aix7_stig_uses_temp_accounts
   tags:
     - AIX7-00-001001
     - SV-101317
