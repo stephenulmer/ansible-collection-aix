@@ -13,7 +13,7 @@
       loop: >-
         {{ aix7_stig_root_path_dirs.results
            | selectattr('stat.isdir')
-           | selectattr('stat.mode', 'mode_permits', '0002')
+           | selectattr('stat.woth', 'equalto', True)
            | map(attribute='stat.path') }}
   when:
     - aix7_00_001034
