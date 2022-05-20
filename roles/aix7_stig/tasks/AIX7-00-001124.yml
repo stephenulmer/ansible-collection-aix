@@ -1,6 +1,31 @@
 ---
 - name: "HIGH | AIX7-00-001124 | AIX root passwords must never be passed over a network in clear text form."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Determine if root has logged in over a network connection
+      command:
+        cmd: "last"
+      changed_when: no
+      register: stig_aix7_lastlog
+
+    - name: Determine if sshd is running
+      command:
+        cmd: "ps -fade"
+      changed_when: no
+      register: stig_aix7_psfade
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-001124 | root user MAY have sent password in clear text"
+      when:
+        - >-
+          stig_aix7_lastlog.stdout_lines
+          | select('search', '^root ')
+          | reject('search', 'console')
+        - >-
+          not
+          stig_aix7_psfade
+          | select('search', 'sshd')
+          | select('reject', 'grep')
   when:
     - aix7_00_001124
   tags:

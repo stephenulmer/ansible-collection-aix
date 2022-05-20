@@ -1,6 +1,21 @@
 ---
 - name: "HIGH | AIX7-00-003101 | The AIX system must have no .netrc files on the system."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Search system for .netrc files
+      ansible.builtin.find:
+        paths: /
+        patterns: '.netrc'
+        file_type: file
+        recurse: yes
+        hidden: yes
+      register: stig_aix7_find_netrc
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-003101 | There is a .netrc file: {{ item }}"
+      loop: "{{ stig_aix7_find_netrc.files | map(attribute='path') }}"
+  run_once: yes
+  become: yes
   when:
     - aix7_00_003101
   tags:
