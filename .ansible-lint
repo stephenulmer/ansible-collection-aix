@@ -4,3 +4,5 @@ kinds:
 skip_list:
   - meta-no-info
   - no-handler
+  - new-line-at-end-of-file
+  - truthy
