@@ -23,7 +23,7 @@
           | reject('search', 'console')
         - >-
           not
-          stig_aix7_psfade
+          stig_aix7_psfade.stdout_lines
           | select('search', 'sshd')
           | select('reject', 'grep')
   when:
