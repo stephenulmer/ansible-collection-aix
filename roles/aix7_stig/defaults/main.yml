@@ -10,13 +10,14 @@ aix7_stig_app_users:
 aix7_stig_root_home: '/root'
 aix7_stig_remediate_findings: yes
 
-## should *not* contain root
 aix7_stig_system_accounts:
-  - bin
-  - sys
   - adm
-  - lpd
+  - bin
   - ipsec
+  - lpd
+  - root
+  - sys
+  - uucp
 
 aix7_stig_shared_accounts: []
 aix7_stig_default_accounts: []
