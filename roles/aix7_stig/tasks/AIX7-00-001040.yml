@@ -1,6 +1,19 @@
 ---
+## FIXME: Could be remediated automatically
 - name: "MEDIUM | AIX7-00-001040 | The AIX root accounts home directory must not have an extended ACL."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Get ALCs for {{ aix7_stig_root_home }}
+      ansible.builtin.command:
+        cmd: "alcget {{ aix7_stig_root_home }}"
+      changed_when: no
+      register: aix7_stig_aclget_root_home
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-001040 | AIX root user's $HOME has extended ACLs enabled"
+      when: >-
+        {{ aix7_stig_aclget_root_home.stdout
+           | search('extended permissions\s+enabled') }}
   when:
     - aix7_00_001040
   tags:

@@ -1,6 +1,23 @@
 ---
 - name: "MEDIUM | AIX7-00-001011 | Direct logins to the AIX system must not be permitted to shared accounts, default accounts, application accounts, and utility accounts."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check AIX 'rlogin' attribute for ALL users
+      command:
+        cmd: "lsuser -a rlogin ALL"
+      changed_when: no
+      register: aix7_stig_lsuser_rlogin
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-001011 | User {{ item }} is allowed remote logins"
+      loop: >-
+        {{ aix7_stig_lsuser_rlogin.stdout_lines
+           | select('search', 'rlogin=true')
+           | map('regex_replace', '^(\w+)', '\\1'
+           | intersect(aix7_stig_shared_accounts
+                       + aix7_stig_default_accounts
+                       + aix7_stig_application_accounts
+                       + aix7_stig_utility_accounts) }}
   when:
     - aix7_00_001011
   tags:

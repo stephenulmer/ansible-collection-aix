@@ -1,6 +1,25 @@
 ---
 - name: "MEDIUM | AIX7-00-001018 | All system files, programs, and directories must be owned by a system account."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Examine permissions for system files
+      ansible.builtin.find:
+        paths:
+          - /etc
+          - /bin
+          - /usr/bin
+          - /usr/lbin
+          - /usr/ucb
+          - /sbin
+          - /usr/sbin
+        recurse: yes
+      register: stig_aix7_find_system
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-003101 | {{ item.pw_name }} owns {{ item.path }}"
+      loop: >-
+        {{ stig_aix7_find_system.files
+           | rejectattr('pw_name', 'in', aix7_stig_system_accounts) }}
   when:
     - aix7_00_001018
   tags:

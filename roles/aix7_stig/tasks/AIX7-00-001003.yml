@@ -1,6 +1,27 @@
 ---
 - name: "MEDIUM | AIX7-00-001003 | AIX must enforce the limit of three consecutive invalid login attempts by a user before the user account is locked and released by an administrator."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Set default AIX user attribute 'loginretries' to 3
+      stephenulmer.aix.chsec:
+        file: /etc/security/user
+        stanza: default
+        attrs:
+          loginretries: 3
+        state: present
+
+    - name: Check AIX 'loginretries' attribute for ALL users
+      command:
+        cmd: "lsuser -a loginretries ALL"
+      changed_when: no
+      register: stig_aix7_lsuser_loginretries
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-001003 | User {{ item }} has bad loginretries attribute"
+      loop: >-
+        {{ stig_aix7_lsuser_system.stdout_lines
+           | reject('search', 'loginretries=[123]')
+           | map('regex_replace', '^(\w+)', '\\1' }}
   when:
     - aix7_00_001003
   tags:

@@ -1,6 +1,24 @@
 ---
+##
+## FIXME: There does not seem to be a way to programmatically get an
+## account's creation time
+##
 - name: "MEDIUM | AIX7-00-001014 | The AIX system must automatically remove or disable emergency accounts after the crisis is resolved or 72 hours."
-  debug: msg="CONTROL NOT IMPLEMENTED"
+  block:
+    - name: Check AIX 'expires' attribute for ALL users
+      command:
+        cmd: "lsuser -a expired ALL"
+      changed_when: no
+      register: aix7_stig_lsuser_expires
+
+    - name: Print results
+      debug:
+        msg: "FINDING | AIX7-00-001014 | Emergency user {{ item }} does not expire"
+      loop: >-
+        {{ aix7_stig_lsuser_expires.stdout_lines
+           | select('search', 'expires=0')
+           | map('regex_replace', '^(\w+)', '\\1'
+           | intersect(aix7_stig_emergency_accounts) }}
   when:
     - aix7_00_001014
   tags:

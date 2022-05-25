@@ -2,6 +2,7 @@
 ## Set falsy if installation does not use feature to avoid the related controls
 aix7_stig_uses_ldap: yes            # LDAP Authentication
 aix7_stig_uses_temp_accounts: yes   # Temporary User Accounts
+aix7_stig_uses_snmp: yes            # Simple Network Management Protocol
 
 aix7_stig_app_users:
   - root
@@ -16,6 +17,12 @@ aix7_stig_system_accounts:
   - adm
   - lpd
   - ipsec
+
+aix7_stig_shared_accounts: []
+aix7_stig_default_accounts: []
+aix7_stig_application_accounts: []
+aix7_stig_utility_accounts: []
+aix7_stig_emergency_accounts: []
 
 aix7_stig_login_banner_text: |
     You are accessing a U.S. Government (USG) Information System (IS)
