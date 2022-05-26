@@ -9,7 +9,7 @@
     - name: Remove system users from cron.allow file
       ansible.builtin.lineinfile:
         path: "/var/adm/cron/cron.allow"
-        regexp: "^({{ aix7_stig_system_accounts | join('|') }}) *$"
+        regexp: "^({{ aix7_stig_system_accounts | difference([ 'root' ]) | join('|') }}) *$"
         state: absent
       when: aix7_stig_cron_allow_stat.stat.exists
 

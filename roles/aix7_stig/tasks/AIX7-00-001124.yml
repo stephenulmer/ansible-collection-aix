@@ -25,7 +25,7 @@
           not
           stig_aix7_psfade.stdout_lines
           | select('search', 'sshd')
-          | select('reject', 'grep')
+          | reject('search', 'grep')
   when:
     - aix7_00_001124
   tags:

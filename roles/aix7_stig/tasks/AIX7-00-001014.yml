@@ -7,7 +7,7 @@
   block:
     - name: Check AIX 'expires' attribute for ALL users
       command:
-        cmd: "lsuser -a expired ALL"
+        cmd: "lsuser -a expires ALL"
       changed_when: no
       register: aix7_stig_lsuser_expires
 
@@ -17,7 +17,7 @@
       loop: >-
         {{ aix7_stig_lsuser_expires.stdout_lines
            | select('search', 'expires=0')
-           | map('regex_replace', '^(\w+)', '\\1'
+           | map('regex_replace', '^(\w+)', '\\1')
            | intersect(aix7_stig_emergency_accounts) }}
   when:
     - aix7_00_001014

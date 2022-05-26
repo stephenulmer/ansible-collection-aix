@@ -2,7 +2,7 @@
 - name: "MEDIUM | AIX7-00-001043 | The Department of Defense (DoD) login banner must be displayed during SSH, sftp, and scp login sessions on AIX."
   block:
     - name: Create /etc/motd.ssh
-      ansible.builtin.template:
+      ansible.builtin.copy:
         dest: "/etc/motd.ssh"
         content: "{{ aix7_stig_login_banner_text }}"
         mode: "0644"
@@ -16,7 +16,7 @@
         line: "Banner /etc/motd.ssh"
         state: present
         validate: "/usr/sbin/sshd -t -f %s"
-        notify: restart sshd
+      notify: restart sshd
   when:
     - aix7_00_001043
   tags:

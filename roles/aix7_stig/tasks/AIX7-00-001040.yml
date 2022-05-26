@@ -11,9 +11,7 @@
     - name: Print results
       debug:
         msg: "FINDING | AIX7-00-001040 | AIX root user's $HOME has extended ACLs enabled"
-      when: >-
-        {{ aix7_stig_aclget_root_home.stdout
-           | search('extended permissions\s+enabled') }}
+      when: aix7_stig_aclget_root_home.stdout is search('extended permissions\s+enabled')
   when:
     - aix7_00_001040
   tags:
