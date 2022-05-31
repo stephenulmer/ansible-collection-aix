@@ -8,7 +8,7 @@
               {% if aix7_stig_common_file_systems | length > 0 %}
               \(
               {% for fs in aix7_stig_common_file_systems %}
-              -name "{{ fs }}"
+              -name "{{ fs }}" {{ "-o " if not loop.last else "" }}
               {% endfor %}
               \)
               -prune
