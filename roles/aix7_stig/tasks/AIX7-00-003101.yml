@@ -7,13 +7,13 @@
           find /
               \(
               {% for fs in aix7_stig_nofind_file_systems + aix7_stig_common_file_systems %}
-              -name "{{ fs }}" {{ "-o " if not loop.last else "" }}
+              -regex "^{{ fs }}" {{ "-o " if not loop.last else "" }}
               {% endfor %}
               \)
               -prune
               -o
               -name ".netrc"
-              -type f
+              -print
       register: stig_aix7_find_netrc
       async: 3600
       poll: 30
@@ -21,7 +21,7 @@
     - name: Search common file systems for .netrc files
       ansible.builtin.command:
         cmd: >-
-          find aix7_stig_common_file_systems
+          find aix7_stig_common_file_systems.join(' ')
               -name ".netrc"
               -type f
       register: stig_aix7_find_netrc_common
