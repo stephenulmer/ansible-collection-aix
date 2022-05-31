@@ -4,6 +4,9 @@ aix7_stig_uses_ldap: yes            # LDAP Authentication
 aix7_stig_uses_temp_accounts: yes   # Temporary User Accounts
 aix7_stig_uses_snmp: yes            # Simple Network Management Protocol
 
+## Perform tests that are high I/O impact
+aix7_stig_do_high_io: yes
+
 aix7_stig_app_users:
   - root
 
@@ -18,6 +21,10 @@ aix7_stig_system_accounts:
   - root
   - sys
   - uucp
+
+aix7_stig_nofind_file_systems:
+  - /aha
+  - /proc
 
 aix7_stig_shared_accounts: []
 aix7_stig_default_accounts: []
