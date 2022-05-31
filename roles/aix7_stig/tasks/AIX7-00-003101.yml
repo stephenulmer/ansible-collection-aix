@@ -1,13 +1,21 @@
 ---
 - name: "HIGH | AIX7-00-003101 | The AIX system must have no .netrc files on the system."
   block:
-    - name: Search system for .netrc files
-      ansible.builtin.find:
-        paths: /
-        patterns: '.netrc'
-        file_type: file
-        recurse: yes
-        hidden: yes
+    - name: Search non-common file systems for .netrc files
+      ansible.builtin.command:
+        cmd: >-
+          find /
+              {% if aix7_stig_common_file_systems | length > 0 %}
+              \(
+              {% for fs in aix7_stig_common_file_systems %}
+              -name "{{ fs }}"
+              {% endfor %}
+              \)
+              -prune
+              -o
+              {% endif %}
+              -name ".netrc"
+              -type f
       register: stig_aix7_find_netrc
       async: 3600
       poll: 30
