@@ -8,7 +8,7 @@
               \(
               \(
               {% for fs in aix7_stig_nofind_file_systems + aix7_stig_common_file_systems %}
-              -regex "^{{ fs }}" {{ "-o " if not loop.last else "" }}
+                -regex "^{{ fs }}" {{ "-o " if not loop.last else "" }}
               {% endfor %}
               \)
               -prune
@@ -36,10 +36,15 @@
 
     - name: Print results
       debug:
-        msg: "FINDING | AIX7-00-003101 | There is a .netrc file: {{ item }}"
+        msg: "FINDING | AIX7-00-003101 | There is a .netrc file: {{ netrc_file }}"
       loop: >-
-        {{ stig_aix7_find_netrc + stig_aix7_find_netrc_common | default([])
-           | map(attribute='files.path') }}
+        {{ stig_aix7_find_netrc.stdout_lines
+           + ( stig_aix7_find_netrc_common.stdout_lines
+               | default([])
+             )
+        }}
+      loop_control:
+        loop_var: netrc_file
   become: yes
   when:
     - aix7_00_003101
