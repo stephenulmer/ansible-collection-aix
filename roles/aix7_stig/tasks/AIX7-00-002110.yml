@@ -1,12 +1,22 @@
 ---
 - name: "MEDIUM | AIX7-00-002110 | AIX must setup SSH daemon to disable revoked public keys."
-  ansible.builtin.lineinfile:
-    path: "/etc/ssh/sshd_config"
-    regexp: '^(# *)?RevokedKeys'
-    line: "RevokedKeys /etc/ssh/revoked_keys.txt"
-    state: present
-    validate: "/usr/sbin/sshd -t -f %s"
-  notify: restart sshd
+  block:
+    - name: Configure SSH daemon to disable revoked public keys
+      ansible.builtin.lineinfile:
+        path: "/etc/ssh/sshd_config"
+        regexp: '^(# *)?RevokedKeys'
+        line: "RevokedKeys /etc/ssh/revoked_keys.txt"
+        state: present
+        validate: "/usr/sbin/sshd -t -f %s"
+      notify: restart sshd
+
+    - name: Create file to store revoked SSH public keys
+      ansible.builtin.file:
+        path: "/etc/ssh/revoked_keys.txt"
+        mode: 0644
+        state: touch 
+        modification_time: preserve
+        access_time: preserve
   when:
     - aix7_00_002110
   tags:
