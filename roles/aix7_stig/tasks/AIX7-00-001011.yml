@@ -13,7 +13,7 @@
       loop: >-
         {{ aix7_stig_lsuser_rlogin.stdout_lines
            | select('search', 'rlogin=true')
-           | map('regex_replace', '^(\w+)', '\\1')
+           | map('regex_replace', '^(\w+)', '\1')
            | intersect(aix7_stig_shared_accounts
                        + aix7_stig_default_accounts
                        + aix7_stig_application_accounts

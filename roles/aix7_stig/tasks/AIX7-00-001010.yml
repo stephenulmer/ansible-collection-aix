@@ -13,7 +13,7 @@
       loop: >-
         {{ stig_aix7_lsuser_system.stdout_lines
            | select('search', 'SYSTEM=NONE')
-           | map('regex_replace', '^(\w+)', '\\1') }}
+           | map('regex_replace', '^(\w+)', '\1') }}
   when:
     - aix7_00_001010
   tags:

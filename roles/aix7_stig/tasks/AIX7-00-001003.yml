@@ -21,7 +21,7 @@
       loop: >-
         {{ stig_aix7_lsuser_loginretries.stdout_lines
            | reject('search', 'loginretries=[123]')
-           | map('regex_replace', '^(\w+)', '\\1') }}
+           | map('regex_replace', '^(\w+)', '\1') }}
   when:
     - aix7_00_001003
   tags:
