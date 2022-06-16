@@ -26,6 +26,8 @@ aix7_stig_nofind_file_systems:
   - /aha
   - /proc
 
+aix7_stig_common_file_systems: []
+
 aix7_stig_shared_accounts: []
 aix7_stig_default_accounts: []
 aix7_stig_application_accounts: []
