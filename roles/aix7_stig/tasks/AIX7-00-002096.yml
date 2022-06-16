@@ -8,7 +8,7 @@
             ('clic.rte.kernext' not in ansible_facts.filesets)
 
     - name: Unimplemented check
-      fail:
+      ansible.builtin.debug:
         msg: "UNIMPLEMENTED: Check list of non-default filesystems for JFS2 encryption"
   when:
     - aix7_00_002096
